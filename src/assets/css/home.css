@@ -1,0 +1,27 @@
+.home{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tutorias-box{
+  margin-top: 220px;
+  width: 85%;
+  background-color: rgba(213, 213, 213, 0.26);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.contenedorTarjetasTotorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+
+
+  
+ 
