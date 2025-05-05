@@ -3,7 +3,7 @@ import TutoriaCard from "./TutoriaCard"
 const TutoriasBox = ()=>{
     return (
         <section className="tutorias-box">
-           <h3>Tutorias</h3>
+           <h3 className="tutoria-title">Tutorias</h3>
            <div className="contenedorTarjetasTotorias">
               <TutoriaCard/>
               <TutoriaCard/>
