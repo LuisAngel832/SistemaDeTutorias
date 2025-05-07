@@ -14,7 +14,7 @@
 
 .contenedorTarjetasTotorias {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   max-width: 1200px;
   margin: auto;

@@ -1,15 +1,22 @@
 .crear-tutoria{
     width: 80%;
-    height: 80vh;
+    height: 70vh;
     background-color: rgba(213, 213, 213, 0.26);
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+.crear-tutoria-content{
+    width: 100%;
 }
 
 .crear-tutoria-title{
     font-size: 36px;
     font-weight: 600;   
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .crear-tutoria-form{

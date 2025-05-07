@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import TutoriasBox from "../components/tutoriasbox";
+import TutoriasBox from "../components/Tutoriasbox";
 import "../assets/css/home.css";    
 const Home = () => {
     return (
