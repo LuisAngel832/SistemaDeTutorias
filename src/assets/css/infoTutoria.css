@@ -1,0 +1,45 @@
+.info-tutoria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.info-tutoria-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+
+.info-tutoria-label{
+    font-size: 24px;
+}
+
+.info-tutoria-input{
+    font-size: 24px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 5px 0 5px 10%;
+    border:none;  
+    border-radius: 12px;
+    color: #28AD56;
+    font-weight: bold;
+}
+
+.info-tutoria-input:focus{
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.info-tutoria-buttons{
+    font-size: 28px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;   
+}
