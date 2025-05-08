@@ -1,14 +1,13 @@
-import "../assets/css/registro.css";
-import logo from "../assets/img/logo.png";
+import "./registro.css";
+import logo from "../../assets/img/logo.png";
 
 const Registro = () => {
-  console.log("Registro");
   return (
     <div className="registro-content">
       <img src={logo} alt="logo" className="registro-img" />
-      
+
       <form className="registro-form">
-      <h2 className="content-title">Registro</h2>
+        <h2 className="content-title">Registro</h2>
         <label htmlFor="nombreCompleto">Nombre completo</label>
         <input className="registro-input" type="text" id="nombreCompleto" />
 

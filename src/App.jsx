@@ -1,14 +1,13 @@
-import './App.css'
-import Home from './pages/Home'
-import CrearTutoria from './pages/CrearTutoria'
-import InfoTutoria from './pages/InfoTutoria'
-import Tutoria from './pages/Tutoria'
-
+import './App.css'  
+import InfoTutoria from './pages/Tutor/InfoTutoria/InfoTutoria'
+import LogIn from './pages/LogIn/LogIn'
+import Registro from './pages/Registro/Registro'
+import CrearTutoria from './pages/Tutor/CrearTutoria/CrearTutoria'
 function App() {
 
   return (
     <div className="App">
-      <Tutoria/>
+      <InfoTutoria/>
     </div>
     
   )

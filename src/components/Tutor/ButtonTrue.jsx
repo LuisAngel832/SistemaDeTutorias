@@ -1,4 +1,4 @@
-import './../assets/css/components/buttonTrue.css';
+import './../../assets/css/components/buttonTrue.css';
 
 const ButtonTrue = ({ text, type, onClick, className }) => {
   const baseClass = type ? "btn-aceptar" : "btn-cancelar";

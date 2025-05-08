@@ -1,5 +1,5 @@
-import "./../assets/css/tutoria.css";
-import Button from "../components/ButtonTrue";
+import "./tutoria.css";
+import Button from "../../components/ButtonTrue";
 import { useState } from "react";
 
 const CardAlumno = ({ matricula, nombre }) => {
@@ -18,10 +18,20 @@ const CardAlumno = ({ matricula, nombre }) => {
 };
 
 const Tutoria = () => {
-  const [FinalizarTutoria, setFinalizarTutoria] = useState(false);
+  const [FinalizarTutoria, setFinalizarTutoria] = useState(true  );
   return (
     <>
-      <section className="ventana-finalizr-tutoria"></section>
+    {FinalizarTutoria ?(
+    <section className="finalizar-tutoria-content">
+      <div className="finalizar-tutoria">
+        <h1>¿Finalizar Tutoria?</h1>
+        <div className="buttons">
+          <Button text='Cancelar'  type={false} />
+          <Button text='Finalizar' type={true}  />
+        </div>
+      </div>
+    </section>
+    ):(<></>)}
       <section className="tutoria-content">
         <div className="tutoria">
           <h2>Tutoria</h2>
@@ -71,6 +81,7 @@ const Tutoria = () => {
           </ul>
         </div>
       </section>
+      
     </>
   );
 };

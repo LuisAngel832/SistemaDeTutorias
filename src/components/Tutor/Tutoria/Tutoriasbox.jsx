@@ -1,4 +1,4 @@
-import TutoriaCard from "./TutoriaCard"
+import TutoriaCard from "./Tutoria/TutoriaCard"
 
 const TutoriasBox = ()=>{
     return (

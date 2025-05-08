@@ -1,5 +1,5 @@
-import "../assets/css/login.css";
-import logo from "../assets/img/logo.png";
+import "./login.css";
+import logo from "../../assets/img/logo.png";
 
 const LogIn = () => {
   return (
