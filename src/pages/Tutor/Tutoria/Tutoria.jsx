@@ -1,26 +1,16 @@
 import "./tutoria.css";
-import Button from "../../components/ButtonTrue";
+import Button from './../../../components/Tutor/ButtonTrue';
+import CardAlumno from './CardAlumno'
+import Header from './../../../components/Tutor/Header';
 import { useState } from "react";
 
-const CardAlumno = ({ matricula, nombre }) => {
-  return (
-    <li className="list-item">
-      <div className="alumno-matricula-content">
-        <h4>Matricula</h4>
-        <p>{matricula}</p>
-      </div>
-      <div className="alumno-nombre-content">
-        <h4>Nombre</h4>
-        <p>{nombre}</p>
-      </div>
-    </li>
-  );
-};
+
 
 const Tutoria = () => {
-  const [FinalizarTutoria, setFinalizarTutoria] = useState(true  );
+  const [FinalizarTutoria, setFinalizarTutoria] = useState(false  );
   return (
     <>
+    <Header />
     {FinalizarTutoria ?(
     <section className="finalizar-tutoria-content">
       <div className="finalizar-tutoria">

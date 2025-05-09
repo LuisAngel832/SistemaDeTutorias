@@ -1,6 +1,6 @@
 import Header from "../../../components/Tutor/Header";
-import TutoriasBox from "../components/Tutoriasbox";
-import "../assets/css/home.css";    
+import TutoriasBox from "./Tutoriasbox";
+import "./home.css";    
 const Home = () => {
     return (
         <div className="home">

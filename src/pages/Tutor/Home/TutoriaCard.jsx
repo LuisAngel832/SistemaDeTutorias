@@ -1,13 +1,13 @@
-import './../assets/css/components/tutoriaCard.css';
-
-
+import { Link } from "react-router-dom";
 const TutoriaCard = () => {
-    return (
+  return (
+    <Link to="info-tutoria">
       <div className="card">
         <div className="card-item">
           <h4 className="card-item-title">Hora</h4>
           <p className="card-item-text-important">8:00</p>
         </div>
+
         <div className="card-item">
           <h4 className="card-item-title">Estado</h4>
           <p className="card-item-text-important">programada</p>
@@ -33,7 +33,8 @@ const TutoriaCard = () => {
           <p className="card-item-text">Edificio 2</p>
         </div>
       </div>
-    );
-  };
+    </Link>
+  );
+};
 
-  export default TutoriaCard;
+export default TutoriaCard;
