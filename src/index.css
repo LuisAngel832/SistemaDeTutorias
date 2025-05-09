@@ -13,6 +13,8 @@ body{
     padding: 0;
     height: 100vh;
     box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
 }
 
 .App{
@@ -22,4 +24,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+  font-family: "Montserrat", sans-serif;
 }

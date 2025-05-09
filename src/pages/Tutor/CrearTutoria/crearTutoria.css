@@ -1,3 +1,10 @@
+.crear-tutoria-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}   
+
 .crear-tutoria{
     width: 80%;
     height: 70vh;
@@ -6,7 +13,8 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    flex-direction: column
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
 }
 
 .crear-tutoria-content{
