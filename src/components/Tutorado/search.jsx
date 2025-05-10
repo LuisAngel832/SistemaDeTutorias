@@ -1,11 +1,14 @@
+import search from './../../assets/img/search.png';
+import notificacion from './../../assets/img/notificacion.png';
 const Search = () => {
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="search-container">
       <input
         type="text"
         placeholder="Search..."
-        className="w-1/2 p-2 border border-gray-300 rounded"
       />
+      <img src={search} alt="" />
+      <img src={notificacion} alt="" />
     </div>
   );
 }   
