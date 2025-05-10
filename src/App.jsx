@@ -1,10 +1,9 @@
 import AppRouter from './Routes/AppRouter';
+import  HomeT  from './pages/Tutorado/HomeT/HomeT';
 
 const App = () => {
-  return (
-    <>
-      <AppRouter />
-    </>
+  return (    
+    <HomeT/>
   );
 };
 

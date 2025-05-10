@@ -15,7 +15,7 @@ const InfoTutoria = () => {
               <h1>¿Finalizar Tutoria?</h1>
               <div className="buttons">
                 <ButtonTrue text="Cancelar Tutoria" type={false} />
-                <ButtonTrue text="Regresar" type={true} />
+                <ButtonTrue text="Regresar" type={true} onClick={()=>{setCancelarTutoria(!cancelarTutoria)}} />
               </div>
             </div>
           </section>
@@ -59,7 +59,7 @@ const InfoTutoria = () => {
           <input className="info-tutoria-input" type="text" name="salon" />
         </form>
         <div className="info-tutoria-buttons">
-          <ButtonTrue type={false} text="Cancelar Tutoria" />
+          <ButtonTrue type={false} text="Cancelar Tutoria" onClick={() => setCancelarTutoria(!cancelarTutoria)}/>
           <ButtonTrue type={true} text="Actualizar" />
         </div>
       </div>
