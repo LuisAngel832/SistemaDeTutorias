@@ -19,6 +19,8 @@ const AppRouter = () => {
       <Route path="/tutoria" element={<Tutoria />} /> 
       <Route path="/info-tutoria/" element={<InfoTutoria />} />
 
+      <Route path="/" element={<InfoTutoria />} />
+
       {/* Redirección en caso de ruta no válida */}
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
