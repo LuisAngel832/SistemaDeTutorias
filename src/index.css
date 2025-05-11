@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;  
-    font-family: "Montserrat", sans-serif;
+    
     font-optical-sizing: auto;
     box-sizing: border-box;
 }
