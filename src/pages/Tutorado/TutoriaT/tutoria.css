@@ -1,0 +1,77 @@
+.tutoria-tutorados{
+    
+    font-family: "Montserrat", sans-serif;
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    height: 85vh;
+    box-sizing: border-box;
+}
+
+.info-tutoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.tutoria-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tutoria-card p{
+    width: 80%;
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.fondo-gris{
+    background-color: rgba(217, 217, 217, 1);
+}
+
+.fondo-gris-claro{
+    background-color:rgba(245, 245, 245, 1) ;
+}
+
+
+/* Estilos para el botón */
+
+.buttons-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.buttons-content button{
+    width: 200px;
+    height: 80px;
+    border-radius: 5px;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.btn-inscribirse{
+    background-color:rgba(40, 173, 86, 1);
+    color: white;
+}
+
+.btn-cancelar{
+    background-color:rgba(255, 0, 0, 1);
+    color: white;
+}
