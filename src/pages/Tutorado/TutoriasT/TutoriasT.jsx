@@ -1,8 +1,12 @@
+import HeaderT from "../../../components/Tutorado/HeaderT";
+import MainContent from "./MainContent";
+import "./tutorias.css";
+
 const TutoriasT = () => {
   return (
-    <div>
-      <h1>TutoriasT</h1>
-      <p>Esta es la página de Tutorías T.</p>
+    <div className="tutorias-tutorados">
+      <HeaderT/>
+      <MainContent />
     </div>
   );
 }
