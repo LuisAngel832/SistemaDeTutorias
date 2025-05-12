@@ -1,0 +1,51 @@
+.main-content{
+    padding-top: 80px;
+}
+
+
+.card-tutoria-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: rgba(40, 173, 86, 1);
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-tutoria-content h2{
+    width: 100%;
+    background-color: rgba(40, 173, 86, 1);
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin: 0;
+}
+
+
+.card-tutoria-content .card-info-tutoria {
+    box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 10%;
+  background-color: rgba(0, 83, 159, 1);
+  font-size: 36px;
+  color: white;
+}
+
+.card-tutoria-content .card-info-tutoria p{
+    padding: 20px 0;
+}
+
+.card-tutoria-content button {
+    background-color: rgba(40, 173, 86, 1);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 36px;
+    cursor: pointer;
+    width: 100%;
+}
