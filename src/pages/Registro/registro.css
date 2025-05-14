@@ -1,3 +1,11 @@
+.registro{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
 .registro-content{
     display: flex;
     flex-direction: column;
@@ -25,10 +33,10 @@
 }
 
 .registro-form label{
-    margin: 0;
     padding: 0;
     font-size: 20px;    
     text-align: left;
+    margin: 1rem 0;
 }
 
 .registro-input{

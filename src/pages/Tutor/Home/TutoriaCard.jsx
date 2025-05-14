@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const TutoriaCard = () => {
   return (
-    <Link to="info-tutoria">
+    <Link to="/tutor/info-tutoria" className="link">
       <div className="card">
         <div className="card-item">
           <h4 className="card-item-title">Hora</h4>
