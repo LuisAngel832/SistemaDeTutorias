@@ -6,7 +6,7 @@ import Perfil from './pages/Tutorado/Perfil/Perfil'
 
 const App = () => {
   return (    
-    <Perfil/>
+    <AppRouter/>
   );
 };
 

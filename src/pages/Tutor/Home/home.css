@@ -3,22 +3,26 @@
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 80px;
 }
 .tutorias-box{
-  margin-top: 140px;
+  margin-top: 3rem;
   width: 90%;
   background-color: rgba(213, 213, 213, 0.26);
   border-radius: 10px;
-  padding: 10px;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 
 .contenedorTarjetasTotorias {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  margin: auto;
-  padding: 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
 }
 
 .tutoria-title{
@@ -100,6 +104,7 @@
   background-color: #1c3d6e;
 }
 
-
-  
- 
+.link{
+  text-decoration: none;
+  color: inherit;
+}
