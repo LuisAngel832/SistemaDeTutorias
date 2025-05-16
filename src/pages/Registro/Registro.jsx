@@ -10,6 +10,7 @@ const Registro = () => {
   const [correo, setCorreo] = useState("");
   const [contraseña, setContraseña] = useState("");
   const [rol, setRol] = useState("alumno");
+  const [matricula, setMatricula] = useState("");
 
   const handleRegistro = async (e) => {
     e.preventDefault();
@@ -61,6 +62,16 @@ const Registro = () => {
             id="nombreCompleto"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
+            required
+          />
+
+          <label htmlFor="matricula">Matricula</label>
+          <input
+            className="registro-input"
+            type="text"
+            id="matricula"
+            value={matricula}
+            onChange={(e) => setMatricula(e.target.value)}
             required
           />
 
