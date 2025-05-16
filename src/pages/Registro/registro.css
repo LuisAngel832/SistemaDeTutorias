@@ -15,12 +15,13 @@
     background-color: rgba(208, 208, 208, 0.31);
     border-radius: 30px;
 }
-
+/*
 .registro-img{
     display: block;
     width: 300px;
     height: auto;
 }
+    */
 
 .registro-form{
     transform: translateY(-50px);
@@ -79,3 +80,4 @@
 button{
     cursor: pointer;
 }
+

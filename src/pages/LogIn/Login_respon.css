@@ -1,0 +1,23 @@
+@media (max-width: 319px) {
+    .login-content {
+      display: none;
+    }
+  }
+  .login-img {
+    width: 100%;
+    max-width: 300px; /* tamaño máximo para pantallas grandes */
+    height: auto;
+    margin-bottom: 1rem; /* espaciado opcional */
+  }
+
+  .login-content {
+    max-width: 500px;
+    width: 80%; /* se adapta, pero con tope */
+
+    height: 80vh;         /* se adapta al 80% de la altura de pantalla */
+    max-height: 900px;    /* tope máximo */
+    min-height: 500px;    /* mínimo requerido para que no se rompa */
+    background-color: rgba(208, 208, 208, 0.31);
+    border-radius: 30px;
+    overflow-y: auto;  
+  }

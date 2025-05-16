@@ -1,5 +1,6 @@
 import "./registro.css";
 import logo from "../../assets/img/logo.png";
+//import "./responsive.css"
 
 const Registro = () => {
   return (
