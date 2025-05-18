@@ -10,7 +10,7 @@ const Header  = () => {
         <div className='header-buttons'>
             <Link to='/tutor/home'><button>Tutorias</button></Link>
             <Link to='/tutor/crear'><button>Crear Tutoria</button></Link>
-            <button>Historial</button>
+            <button>Estadisticas</button>
         </div>
       </div>
     </header>

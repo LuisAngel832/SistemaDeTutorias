@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const TutoriaCard = () => {
+const TutoriaCard = ({tutoriaData}) => {
   return (
     <Link to="/tutor/info-tutoria" className="link">
       <div className="card">

@@ -1,15 +1,20 @@
 import FormInfoTutorias from "./FormInfoTutorias";
 import ButtonsInfo from "./ButtonsInfo";
+import FinalizarTutoria from "./FinalizarTutoria";
 import { useState } from "react";
 
 const MainContentInfoTutoria = () => {
   const [cancelarTutoria, setCancelarTutoria] = useState(false);
 
+  const handleClickCancelarTutoria = () => {
+    setCancelarTutoria(!cancelarTutoria);
+  };
+
   return (
     <div className="info-tutoria-tutor  ">
-      {cancelarTutoria ? <FinalizarTutoria /> : <></>}
+      {cancelarTutoria ? <FinalizarTutoria handleClickCancelarTutoria={handleClickCancelarTutoria}/> : <></>}
       <FormInfoTutorias />
-      <ButtonsInfo />
+      <ButtonsInfo handleClickCancelarTutoria={handleClickCancelarTutoria}/>
     </div>
   );
 };

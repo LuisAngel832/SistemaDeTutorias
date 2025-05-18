@@ -2,10 +2,16 @@ import "./login.css";
 import logo from "../../assets/img/logo.png";
 import { useNavigate } from "react-router-dom";
 import "./Login_respon.css";
+import { use, useState } from "react";
+
 
 
 const LogIn = () => {
-  const navigate = useNavigate();  
+  const navigate = useNavigate(); 
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [contraseña, setContraseña] = useState("");
+  const [rol, setRol] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -28,10 +34,10 @@ const LogIn = () => {
         <img src={logo} alt="logo" className="login-img" />
         <form className="login-form">
           <label htmlFor="matricula">Matrícula</label>
-          <input type="text" id="matricula" className="login-input" />
+          <input type="text" id="matricula" className="login-input" onChange={(e) => setMatricula(e.target.value)} />
 
           <label htmlFor="contraseña">Contraseña</label>
-          <input type="password" id="contraseña" className="login-input" />
+          <input type="password" id="contraseña" className="login-input" onChange={(e) => setContraseña(e.target.value)} />
 
           <button type="submit" className="login-button-confirm" onClick={handleLogin}>
             Iniciar Sesión
