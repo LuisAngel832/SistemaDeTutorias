@@ -11,7 +11,7 @@
   }
 
   .login-content {
-    max-width: 500px;
+    max-width: 708px;
     width: 80%; /* se adapta, pero con tope */
 
     height: 80vh;         /* se adapta al 80% de la altura de pantalla */
@@ -21,3 +21,5 @@
     border-radius: 30px;
     overflow-y: auto;  
   }
+
+ 

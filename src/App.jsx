@@ -8,7 +8,7 @@ import LogIn from './pages/LogIn/LogIn';
 
 const App = () => {
   return (    
-    <LogIn/>
+    <Registro/>
   );
 };
 

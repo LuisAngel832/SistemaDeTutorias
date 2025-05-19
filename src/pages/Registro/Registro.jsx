@@ -1,6 +1,6 @@
 import "./registro.css";
 import logo from "../../assets/img/logo.png";
-import "./responsive.css"
+import "./Registro_respon.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
