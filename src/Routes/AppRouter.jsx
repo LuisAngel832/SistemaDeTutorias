@@ -11,8 +11,8 @@ import InfoTutoria from '../pages/Tutor/InfoTutoria/InfoTutoria';
 
 
 import HomeTutorado from '../pages/Tutorado/HomeT/HomeT';
-import MiPerfil from '../pages/Tutorado/Perfil/PerfilInfo';
-import MisTutorias from '../pages/Tutorado/Perfil/MisTutorias';
+import MiPerfil from '../pages/Tutorado/Perfil/Perfil';
+import MisTutorias from '../pages/Tutorado/TutoriasT/TutoriasT';
 
 const getUserRole = () => {
   return localStorage.getItem("rol"); 
