@@ -5,9 +5,8 @@ import './perfil.css'
 const Perfil  = ()=>{
     return (
         <div className="perfil">
-            <HeaderT/>
+            <HeaderT search={false}/>
             <MainContentPerfil/>
-            
         </div>
     )
 }
