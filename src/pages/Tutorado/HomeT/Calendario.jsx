@@ -20,7 +20,7 @@ const Calendario = ({ mes, anio }) => {
           {dia}
         </div>
       ))}
-    </div>
+    </div> 
   );
 };
 

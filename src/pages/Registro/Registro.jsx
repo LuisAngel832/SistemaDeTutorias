@@ -1,7 +1,9 @@
 import "./registro.css";
 import logo from "../../assets/img/logo.png";
+import "./Registro_respon.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 
 const Registro = () => {
   const navigate = useNavigate();

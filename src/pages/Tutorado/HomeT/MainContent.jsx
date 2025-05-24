@@ -6,4 +6,4 @@ const MainContent = () => {
             </div>
         </div>
     )
-}
+} 
