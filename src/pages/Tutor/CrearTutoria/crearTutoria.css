@@ -61,3 +61,8 @@
     display: flex;
     justify-content: flex-end;
 }
+
+
+.select{
+    height: 50px;
+}

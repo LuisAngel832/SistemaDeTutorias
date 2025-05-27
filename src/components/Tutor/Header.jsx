@@ -1,4 +1,4 @@
-import logo from '../../assets/img/logo-header.png';
+  import logo from '../../assets/img/logo-header.png';
 import '../../assets/css/components/header.css';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const Header  = () => {
         <div className='header-buttons'>
             <Link to='/tutor/home'><button>Tutorias</button></Link>
             <Link to='/tutor/crear'><button>Crear Tutoria</button></Link>
-            <button>Estadisticas</button>
+            <Link to ='/tutor/agregar-horario'><button>Agregar horario</button></Link>
         </div>
       </div>
     </header>

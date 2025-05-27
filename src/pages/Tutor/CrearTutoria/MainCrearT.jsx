@@ -58,7 +58,7 @@ const MainCrearT = () => {
             setAula={setAula}
         />
         <div className="button-crear-tutoria">
-          <button onClick={handleSubmit}>Crear</button>
+          <button className="btn-aceptar" onClick={handleSubmit}>Crear</button>
         </div>
       </div>
     </div>
