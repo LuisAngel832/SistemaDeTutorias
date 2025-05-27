@@ -9,24 +9,29 @@ const Registro = () => {
   const navigate = useNavigate();
 
   const [nombre, setNombre] = useState("");
+  const [apellidoP, setApellidoP] = useState("");
+  const [apellidoM, setApellidoM] = useState("");
   const [correo, setCorreo] = useState("");
-  const [contraseña, setContraseña] = useState("");
+  const [password, setpassword] = useState("");
   const [rol, setRol] = useState("alumno");
   const [matricula, setMatricula] = useState("");
 
   const handleRegistro = async (e) => {
     e.preventDefault();
 
-    const usuario = {
-      nombre,
-      correo,
-      contraseña,
-    };
-
     const url =
       rol === "profesor"
         ? "http://localhost:8082/tutor/registro"
         : "http://localhost:8082/tutorado/registro";
+
+    const usuario = {
+      matricula,
+      nombre,
+      apellidoP,
+      apellidoM,
+      correo,
+      password,
+    };
 
     try {
       const response = await fetch(url, {
@@ -57,13 +62,33 @@ const Registro = () => {
         <form className="registro-form" onSubmit={handleRegistro}>
           <h2 className="content-title">Registro</h2>
 
-          <label htmlFor="nombreCompleto">Nombre completo</label>
+          <label htmlFor="nombre">Nombre</label>
           <input
             className="registro-input"
             type="text"
-            id="nombreCompleto"
+            id="nombre"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
+            required
+          />
+
+          <label htmlFor="apellidoP">Apellido Paterno</label>
+          <input
+            className="registro-input"
+            type="text"
+            id="apellidoP"
+            value={apellidoP}
+            onChange={(e) => setApellidoP(e.target.value)}
+            required
+          />
+
+          <label htmlFor="apellidoM">Apelldio Materno</label>
+          <input
+            className="registro-input"
+            type="text"
+            id="apellidoM"
+            value={apellidoM}
+            onChange={(e) => setApellidoM(e.target.value)}
             required
           />
 
@@ -87,13 +112,13 @@ const Registro = () => {
             required
           />
 
-          <label htmlFor="contraseña">Contraseña</label>
+          <label htmlFor="password">Contraseña</label>
           <input
             className="registro-input"
             type="password"
-            id="contraseña"
-            value={contraseña}
-            onChange={(e) => setContraseña(e.target.value)}
+            id="conpasswordtraseña"
+            value={password}
+            onChange={(e) => setpassword(e.target.value)}
             required
           />
 

@@ -1,51 +1,91 @@
 import "./login.css";
 import logo from "../../assets/img/logo.png";
+
 import { useNavigate } from "react-router-dom";
 import "./Login_respon.css";
 import { use, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
 const LogIn = () => {
-  const navigate = useNavigate(); 
-  const [nombre, setNombre] = useState("");
-  const [correo, setCorreo] = useState("");
-  const [contraseña, setContraseña] = useState("");
-  const [rol, setRol] = useState("");
+  const navigate = useNavigate();
+  const [matricula, setMatricula] = useState("");
+  const [contraseña, setContrasenia] = useState("");
+  const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-  
-    // Simula login de tutor (cámbialo si es tutorado)
-    localStorage.setItem("rol", "tutor"); // o "tutorado"
-    localStorage.setItem("matricula", "zs23004692");
-  
-    // Redirige a home según rol
-    if (localStorage.getItem("rol") === "tutor") {
-      navigate("/tutor/home");
-    } else {
-      navigate("/tutorado/home");
+
+    try {
+      const response = await fetch("http://localhost:8082/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          matricula: matricula,
+          password: contraseña
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        setError(errorText);
+        return;
+      }
+
+      const data = await response.json();
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("rol", data.rol);
+      localStorage.setItem("matricula", matricula);
+
+      
+      if (data.rol === "tutor") {
+        navigate("/tutor/home");
+      } else if (data.rol === "tutorado") {
+        navigate("/tutorado/home");
+      }
+
+    } catch (err) {
+      console.error(err);
+      setError("Error al conectar con el servidor");
     }
   };
-  
+
   return (
     <div className="Login">
       <div className="login-content">
         <img src={logo} alt="logo" className="login-img" />
-        <form className="login-form">
+        {error && <p className='error'>Usuario o contraseña incorrectos</p>}
+        <form className="login-form" onSubmit={handleLogin}>
           <label htmlFor="matricula">Matrícula</label>
-          <input type="text" id="matricula" className="login-input" onChange={(e) => setMatricula(e.target.value)} />
+          <input
+            type="text"
+            id="matricula"
+            className="login-input"
+            value={matricula}
+            onChange={(e) => setMatricula(e.target.value)}
+          />
 
           <label htmlFor="contraseña">Contraseña</label>
-          <input type="password" id="contraseña" className="login-input" onChange={(e) => setContraseña(e.target.value)} />
+          <input
+            type="password"
+            id="contraseña"
+            className="login-input"
+            value={contraseña}
+            onChange={(e) => setContrasenia(e.target.value)}
+          />
 
-          <button type="submit" className="login-button-confirm" onClick={handleLogin}>
+          <button type="submit" className="login-button-confirm" onclick={handleLogin}>
             Iniciar Sesión
           </button>
 
+          
+
           <section className="login-buttons">
             <button type="button">Recuperar Contraseña</button>
-            <button type="button">Registrarse</button>
+            <Link to="/registro"><button type="button">Registrarse</button></Link>
           </section>
         </form>
       </div>
