@@ -8,6 +8,7 @@ import HomeTutor from '../pages/Tutor/Home/Home';
 import CrearTutoria from '../pages/Tutor/CrearTutoria/CrearTutoria';
 import Tutoria from '../pages/Tutor/Tutoria/Tutoria';
 import InfoTutoria from '../pages/Tutor/InfoTutoria/InfoTutoria';
+import AgregarHorario from '../pages/Tutor/AgregarHorario/AgregarHorario';
 
 import HomeTutorado from '../pages/Tutorado/HomeT/HomeT';
 import MiPerfil from '../pages/Tutorado/Perfil/Perfil';
@@ -50,6 +51,11 @@ const AppRouter = () => {
       <Route path="/tutor/info-tutoria" element={
         <PrivateRoute allowedRoles={["tutor"]}>
           <InfoTutoria />
+        </PrivateRoute>
+      } />
+      <Route path="/tutor/agregar-horario" element={
+        <PrivateRoute allowedRoles={["tutor"]}>
+          <AgregarHorario />
         </PrivateRoute>
       } />
 

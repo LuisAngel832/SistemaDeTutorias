@@ -1,0 +1,145 @@
+.agregar-horario{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+    
+}       
+
+.main-horario{ 
+    width: 80%;
+    height: 80%;
+    background-color:rgba(213, 213, 213, 0.26);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.main-horario-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem ;
+    box-sizing: border-box;
+}
+
+.main-horario >h2{
+    padding-left: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.select-hora-min{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-fecha{
+    width: 100%;
+}
+.select-hora{
+    box-sizing: border-box  ;
+    width: 350px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: #ECE6F0;
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    padding-top: 0;  
+}
+
+.select-hora-title{
+    width: 100%;
+    text-align: start;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.select-hora-content{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.select-hora-input{
+    font-size: 2rem;
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #E6E0E9;
+}
+
+.select-hora-input:focus{
+    background-color: #EADDFF;
+    border: blue solid 1px;
+    color: #4F378A;
+}
+
+.select-hora-am-pm{
+    display: flex;
+    flex-direction: column;
+}
+
+.select-hora-am-button{
+    font-size: 1.1rem;
+    width: 50px;
+    height: 40px;
+    border-radius: 5px 5px 0px 0px;
+    border: rgba(0, 0, 0, .5) solid 1px;     
+    background-color: #E6E0E9;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.select-hora-pm-button{
+    font-size: 1.1rem;
+    width: 50px;
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 0px 0px 5px 5px;
+    border: rgba(0, 0, 0, .5) solid 1px;        
+    background-color: #E6E0E9;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.select-hora-puntos{
+    font-size: 3rem;
+    font-weight: 500;
+    transform: translateY(-10px);
+}
+
+.select-hora-am-pm .selected{
+    background-color: #28AD56;
+    color: white;
+    border: none;
+    border: 1px solid black;
+}
+
+.button-content{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    padding: 0px 3rem 0px 0px;
+
+}
