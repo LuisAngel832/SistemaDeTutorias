@@ -21,7 +21,7 @@ const Registro = () => {
 
     const url =
       rol === "profesor"
-        ? "http://localhost:8082/tutor/registro"
+        ? "https://backtutorias.onrender.com/tutor/registro"
         : "http://localhost:8082/tutorado/registro";
 
     const usuario = {
