@@ -6,17 +6,5 @@ const App = () => {
 };
 
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginTutor from './pages/LoginTutor';
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/login-tutor" element={<LoginTutor />} />
-      </Routes>
-    </Router>
-  );
-}
 
 export default App;

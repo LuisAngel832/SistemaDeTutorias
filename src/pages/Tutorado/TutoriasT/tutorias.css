@@ -56,3 +56,65 @@
     cursor: pointer;
     width: 100%;
 }
+
+/* ✅ Estilos responsivos comunes para el apartado de tutorado */
+
+@media (max-width: 768px) {
+  .main-content,
+  .main-content-perfil,
+  .info-tutoria,
+  .tutoria-card,
+  .mistutorias-content,
+  .card-tutoria-content {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .perfil-info-content div,
+  .card-info-tutoria,
+  .tutoria-card p {
+    font-size: 1rem !important;
+    padding: 10px 0;
+    width: 100% !important;
+  }
+
+  .buttons-content {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .buttons-content button {
+    width: 90% !important;
+    font-size: 1rem;
+  }
+
+  .card-tutoria-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-info-tutoria {
+    padding-left: 5%;
+  }
+
+  .tutoria-card p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .perfil-info-content div,
+  .card-info-tutoria,
+  .tutoria-card p {
+    font-size: 0.9rem !important;
+  }
+
+  .buttons-content button {
+    font-size: 0.9rem;
+  }
+
+  .card-tutoria-content h2 {
+    font-size: 1.2rem;
+  }
+}
