@@ -1,4 +1,5 @@
 import "./infoTutoria.css";
+import "./infoTutoR.css";
 import Header from "../../../components/Tutor/Header";
 import MainContentInfoTutoria from "./MainContentInfoTutoria";
 

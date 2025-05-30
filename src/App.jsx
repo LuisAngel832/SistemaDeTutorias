@@ -1,12 +1,11 @@
 import AppRouter from './Routes/AppRouter';
 import FormCrearTutoria from './pages/Tutor/CrearTutoria/formCrearTutoria';
-import CrearTutoria from './pages/Tutor/CrearTutoria/CrearTutoria';
-import LogIn from './pages/LogIn/LogIn';
-import Registro from './pages/Registro/Registro';
-import Home from './pages/Tutor/Home/Home';
+import InfoTutoria from './pages/Tutor/InfoTutoria/InfoTutoria';
+import FinalizarTutoria from './pages/Tutor/InfoTutoria/FinalizarTutoria';
+
 const App = () => {
   return (   
-    <Home/>
+    <InfoTutoria/>
   );
 };
 
