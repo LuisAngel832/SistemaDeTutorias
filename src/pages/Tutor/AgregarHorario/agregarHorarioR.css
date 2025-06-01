@@ -70,3 +70,22 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .MuiPickersLayout-root {
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .MuiDateCalendar-root {
+    width: 100% !important;
+  }
+
+  .MuiPickersSlideTransition-root {
+    min-height: 300px; /* control sobre la altura interna del calendario */
+  }
+
+  .MuiDayCalendar-weekContainer {
+    justify-content: center;
+  }
+}

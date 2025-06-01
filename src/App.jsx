@@ -10,7 +10,7 @@ import MainHorario from './pages/Tutor/AgregarHorario/Mainhorario';
 
 const App = () => {
   return (   
-    <MainHorario/>
+    <AgregarHorario/>
   );
 };
 
