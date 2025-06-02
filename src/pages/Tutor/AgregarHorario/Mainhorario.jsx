@@ -49,7 +49,14 @@ const MainHorario = () => {
       console.error("Error de red:", error);
       alert("Error al conectar con el servidor");
     }
+
+    
+    
+
   };
+
+
+  
   
 
   return (

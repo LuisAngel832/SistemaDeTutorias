@@ -48,7 +48,7 @@ const AppRouter = () => {
           <Tutoria />
         </PrivateRoute>
       } />
-      <Route path="/tutor/info-tutoria" element={
+      <Route path="/tutor/info-tutoria/:id" element={
         <PrivateRoute allowedRoles={["tutor"]}>
           <InfoTutoria />
         </PrivateRoute>
