@@ -29,23 +29,31 @@
 }
 
 .crear-tutoria-form{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .crear-tutoria-label{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 200px;
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
+
+.input-group{
+    display: flex;
+    width: 100%;
+    gap: 20px
+}
 
 
 .crear-tutoria-input{
@@ -64,5 +72,8 @@
 
 
 .select{
-    height: 50px;
+    font-size: 18px;
+    width: 76.5%;
+    height: 60px;
+    background-color: white;
 }
