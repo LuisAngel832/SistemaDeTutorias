@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 const TutoriaCard = ({ tutoriaData }) => {
-  console.log(tutoriaData);
   return (
     <Link
-      to={`/tutor/info-tutoria/${tutoriaData.idTutoria}`}
+      to={`/tutor/tutoria/${tutoriaData.idTutoria}`}
       className="link"
       key={tutoriaData.idTutoria}
     >
-      <div className="card">
+      <div className="card" key={tutoriaData.idTutoria}>
         <div className="card-item">
           <h4 className="card-item-title">Hora</h4>
           <p className="card-item-text-important">

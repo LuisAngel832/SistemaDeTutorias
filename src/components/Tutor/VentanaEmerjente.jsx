@@ -1,6 +1,6 @@
 import ButtonTrue from "../../components/Tutor/ButtonTrue";
 
-const VentanaEmerjente = ({ handleClick, text, textBtn1, textBtn2 }) => {
+const VentanaEmerjente = ({ handleClickBtn1, handleClickBtn2, text, textBtn1, textBtn2 }) => {
   return (
     <section className="finalizar-tutoria-content">
       <div className="finalizar-tutoria">
@@ -10,19 +10,19 @@ const VentanaEmerjente = ({ handleClick, text, textBtn1, textBtn2 }) => {
             <ButtonTrue
               text={textBtn1}
               type={true}
-              onClick={handleClick}
+              onClick={handleClickBtn1}
             />
           ) : (
             <>
               <ButtonTrue
                 text={textBtn1}
                 type={false}
-                onClick={handleClick}
+                onClick={handleClickBtn1}
               />
               <ButtonTrue
                 text={textBtn2}
                 type={true}
-                onClick={handleClick}
+                onClick={handleClickBtn2}
               />
             </>
           )}

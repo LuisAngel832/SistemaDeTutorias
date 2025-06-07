@@ -22,7 +22,7 @@ const Registro = () => {
     const url =
       rol === "profesor"
         ? "https://backtutorias.onrender.com/tutor/registro"
-        : "http://localhost:8082/tutorado/registro";
+        : "https://backtutorias.onrender.com/tutorado/registro";
 
     const usuario = {
       matricula,
@@ -46,7 +46,8 @@ const Registro = () => {
         alert("Registro exitoso");
         navigate("/login");
       } else {
-        alert("Error al registrar. Verifica los datos.");
+        const errorText = await response.text();
+        console.log(errorText);
       }
     } catch (error) {
       console.error("Error al registrar:", error);
