@@ -1,6 +1,6 @@
 import ButtonTrue from "../../../components/Tutor/ButtonTrue";
 
-const      FinalizarTutoria = ({handleClickCancelarTutoria, handleOnConfirm}) => {
+const      FinalizarTutoria = ({handleClickCancelarTutoria, handleOnConfirm, actualizarTutoria}) => {
   return (
     <section className="finalizar-tutoria-content">
       <div className="finalizar-tutoria">

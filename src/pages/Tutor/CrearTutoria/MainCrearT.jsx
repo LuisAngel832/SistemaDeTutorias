@@ -70,13 +70,11 @@ const MainCrearT = () => {
 
       if (!response.ok) {
         const errorText = await response.text();
-        console.error("Error:", errorText);
         return;
       }
 
       const data = await response.json();
       console.log(data);
-      console.log(localStorage.getItem("token"));
     } catch (error) {
       console.error("Error al hacer fetch:", error);
     }
