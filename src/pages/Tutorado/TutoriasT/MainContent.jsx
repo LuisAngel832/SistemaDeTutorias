@@ -17,7 +17,8 @@ const MainContent = () => {
             if (!response.ok) throw new Error("Error al obtener tutorias");
             const data = await response.json();
 
-            setTutorias(data.data);
+            const activas = data.data.filter((t)=> t.estado === "ACTIVO");
+            setTutorias(activas);
             console.log(data.data);
         } catch (error) {
             console.error(error);
@@ -31,7 +32,7 @@ const MainContent = () => {
     return (
         <div className="main-content-tutorias">
             {tutorias.map((tutoria) => (
-                <CardTutoria key={tutoria.id} tutoria={tutoria} />
+                <CardTutoria key={tutoria.idTutoria} tutoria={tutoria} />
             ))}
 
         </div>

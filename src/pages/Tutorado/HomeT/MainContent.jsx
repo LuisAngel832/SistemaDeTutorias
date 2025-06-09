@@ -9,15 +9,23 @@ const MainContent = () => {
   
       const featchTutorias = async () => {
           try {
-              const response = await fetch("https://backtutorias.onrender.com/tutorias/all",{
+              const response = await fetch("https://backtutorias.onrender.com/tutorado/mis-tutorias",{
                   method: "GET",
                   headers: {
                       "Content-Type": "application/json",
                       Authorization: `Bearer ${localStorage.getItem("token")}`,
                   },
               });
-              if (!response.ok) throw new Error("Error al obtener tutorias");
-              const data = await response.json();
+              
+           
+  
+            const data = await response.json();
+  
+            if (!response.ok){
+              console.log(data)
+              console.log(data.message)
+              throw new Error(data.message)
+            }
   
               setTutorias(data.data);
               console.log(data.data);

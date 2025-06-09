@@ -3,9 +3,10 @@ import logo from "../../assets/img/logo.png";
 import "./Registro_respon.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import useAutentificacion from "../../hooks/useAutentificacion";
 
 const Registro = () => {
+  const {registro} = useAutentificacion();
   const navigate = useNavigate();
 
   const [nombre, setNombre] = useState("");
@@ -18,12 +19,6 @@ const Registro = () => {
 
   const handleRegistro = async (e) => {
     e.preventDefault();
-
-    const url =
-      rol === "profesor"
-        ? "https://backtutorias.onrender.com/tutor/registro"
-        : "https://backtutorias.onrender.com/tutorado/registro";
-
     const usuario = {
       matricula,
       nombre,
@@ -33,27 +28,8 @@ const Registro = () => {
       password,
     };
 
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(usuario),
-      });
-
-      if (response.ok) {
-        alert("Registro exitoso");
-        navigate("/login");
-      } else {
-        const errorText = await response.text();
-        console.log(errorText);
-      }
-    } catch (error) {
-      console.error("Error al registrar:", error);
-      alert("No se pudo conectar al servidor.");
-    }
-  };
+    registro(rol, usuario, setError);
+  }
 
   return (
     <div className="registro">
