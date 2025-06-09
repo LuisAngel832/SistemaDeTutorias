@@ -1,52 +1,20 @@
-
 import Calendario from "./Calendario";
-import { useState,useEffect } from "react";
+import { useTutoriasTutorado } from "../../../hooks/useTutoriaTutorado";
 
 const MainContent = () => {
-
-  const [tutorias, setTutorias] = useState([]);
-  
-  
-      const featchTutorias = async () => {
-          try {
-              const response = await fetch("https://backtutorias.onrender.com/tutorado/mis-tutorias",{
-                  method: "GET",
-                  headers: {
-                      "Content-Type": "application/json",
-                      Authorization: `Bearer ${localStorage.getItem("token")}`,
-                  },
-              });
-              
-           
-  
-            const data = await response.json();
-  
-            if (!response.ok){
-              console.log(data)
-              console.log(data.message)
-              throw new Error(data.message)
-            }
-  
-              setTutorias(data.data);
-              console.log(data.data);
-          } catch (error) {
-              console.error(error);
-          }
-      }
-  
-      useEffect(() => {
-          featchTutorias();
-      }, [])
+  const { tutorias, error } = useTutoriasTutorado();
 
   return (
-    <div className="main-contnent-home-tutorado">
+    <div className="main-content-home-tutorado">
       <div className="home-tutorado">
-        <Calendario mes={6} anio={2025} tutorias={tutorias} />
-
+        {error ? (
+          <p className="error-text">Ocurrió un error: {error}</p>
+        ) : (
+          <Calendario mes={6} anio={2025} tutorias={tutorias} />
+        )}
       </div>
     </div>
   );
 };
 
-
-export default MainContent  
+export default MainContent;

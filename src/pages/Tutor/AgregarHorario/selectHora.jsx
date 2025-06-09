@@ -13,28 +13,33 @@ const SelectHora = ({
   setMinutosFin,
 }) => {
 
-  const handleHoraChange = (e) => {
-    const val = parseInt(e.target.value);
-    if (value === "inicio") {
-      setHoraInicio(Math.min(val, 23));
-    } else {
-      setHoraFin(Math.min(val, 23));
+
+  const setters = {
+    inicio:{
+      setHora: setHoraInicio,
+      setMin: setMinutosInicio,
+      hora: horaInicio,
+      minutos: minutosInicio,
+    },
+    fin:{
+      setHora: setHoraFin,
+      setMin: setMinutosFin,
+      hora: horaFin,
+      minutos: minutosFin,
     }
+  }
+
+  const {setHora, setMin, hora, minutos} = setters[value] || {};
+
+  const handleHoraChange = (e) => {
+    const val = Math.max(0, Math.min(23, parseInt(e.target.value) || 0));
+    setHora(val);
   };
 
   const handleMinutosChange = (e) => {
-    const val = parseInt(e.target.value);
-    if (value === "inicio") {
-      setMinutosInicio(Math.min(val, 59));
-    } else {
-      setMinutosFin(Math.min(val, 59));
-    }
+    const val = Math.max(0, Math.min(59, parseInt(e.target.value) || 0));
+    setMin(val);
   };
-
- 
-
-  const horaActual = value === "inicio" ? horaInicio : horaFin;
-  const minutosActual = value === "inicio" ? minutosInicio : minutosFin;
 
   return (
     <section className="select-hora">
@@ -47,8 +52,9 @@ const SelectHora = ({
             className="select-hora-input"
             min={0}
             max={23}
-            value={horaActual ?? ""}
+            value={hora ?? ""}
             onChange={handleHoraChange}
+            name={`${value}-hora`}
           />
           <p className="select-hora-input-text">hora</p>
         </div>
@@ -61,8 +67,9 @@ const SelectHora = ({
             className="select-hora-input"
             min={0}
             max={59}
-            value={minutosActual ?? ""}
+            value={minutos ?? ""}
             onChange={handleMinutosChange}
+            name={`${value}-minutos`}
           />
           <p className="select-hora-input-text">minutos</p>
         </div>

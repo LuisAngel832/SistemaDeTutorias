@@ -14,72 +14,76 @@ const FormCrearTutoria = ({
 }) => {
   const [horariosDisponibles, setHorariosDisponibles] = useState([]);
 
-  const handleClickMostrarHorarios = async () => {
-    try {
-      const response = await fetch("https://backtutorias.onrender.com/tutor/misHorarios", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${localStorage.getItem("token")}`,
-        }
-      });
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error("Error:", errorText);
-        return;
-      }
-
-      const data = await response.json();
-      setHorariosDisponibles(data.data);
-
-    } catch (error) {
-      console.error("Error al hacer fetch:", error);
-    }
-  };
-
   useEffect(() => {
-    handleClickMostrarHorarios();
+    const obtenerHorarios = async () => {
+      try {
+        const response = await fetch(
+          "https://backtutorias.onrender.com/tutor/misHorarios",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          console.error("Error al obtener horarios");
+          return;
+        }
+
+        const data = await response.json();
+        setHorariosDisponibles(data.data || []);
+      } catch (error) {
+        console.error("Error de red al cargar horarios:", error);
+      }
+    };
+
+    obtenerHorarios();
   }, []);
 
   return (
     <form className="crear-tutoria-form">
-      {/* NRC de Materia */}
       <div className="input-group">
-        <label htmlFor="nrc-materia" className="crear-tutoria-label">Nrc de Materia:</label>
+        <label htmlFor="nrc-materia" className="crear-tutoria-label">
+          NRC de Materia
+        </label>
         <input
-          type="text"
+          type="number"
           className="crear-tutoria-input"
-          placeholder="Nrc de Materia"
           name="nrc-materia"
+          placeholder="NRC"
           required
           value={nrcMateria}
           onChange={(e) => setNrcMateria(e.target.value)}
         />
       </div>
 
-      {/* Horario */}
       <div className="input-group">
-        <label htmlFor="horario" className="crear-tutoria-label">Horario</label>
-        <select 
+        <label htmlFor="horario" className="crear-tutoria-label">
+          Horario
+        </label>
+        <select
           className="crear-tutoria-input select"
           name="horario"
-          onChange={(e) => setHorario(e.target.value)} 
+          onChange={(e) => setHorario(e.target.value)}
           value={horario}
           required
         >
           <option value="">Selecciona tu horario</option>
-          {horariosDisponibles.map((horario) => (
-            <option key={horario.idHorario} value={horario.idHorario} onClick={() => setHorario(horario.idHorario)}>
-              {horario.horaInicio} - {horario.horaFin} - {horario.dia}
+          {horariosDisponibles.map((h) => (
+            <option key={h.idHorario} value={h.idHorario}>
+              {h.horaInicio} - {h.horaFin} - {h.dia}
             </option>
           ))}
         </select>
       </div>
 
-      {/* Fecha */}
       <div className="input-group">
-        <label htmlFor="fecha" className="crear-tutoria-label">Fecha</label>
+        <label htmlFor="fecha" className="crear-tutoria-label">
+          Fecha
+        </label>
         <input
           type="date"
           className="crear-tutoria-input"
@@ -90,9 +94,10 @@ const FormCrearTutoria = ({
         />
       </div>
 
-      {/* Edificio */}
       <div className="input-group">
-        <label htmlFor="edificio" className="crear-tutoria-label">Edificio</label>
+        <label htmlFor="edificio" className="crear-tutoria-label">
+          Edificio
+        </label>
         <select
           className="crear-tutoria-input select"
           name="edificio"
@@ -106,9 +111,10 @@ const FormCrearTutoria = ({
         </select>
       </div>
 
-      {/* Aula */}
       <div className="input-group">
-        <label htmlFor="aula" className="crear-tutoria-label">Aula</label>
+        <label htmlFor="aula" className="crear-tutoria-label">
+          Aula
+        </label>
         <select
           className="crear-tutoria-input select"
           name="aula"
