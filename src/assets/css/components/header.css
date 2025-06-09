@@ -1,104 +1,153 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background-color: #2d5fa7;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* centra horizontalmente el contenido */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  .header-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .header-logo {
-    transform: translateY(15px);
-    height: 100px;
-    width: auto;
-  }
-  
-  .header-title {
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
-
-.header-buttons{
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #2d5fa7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0 1rem;
 }
 
-.header-buttons button{
-    background-color: #2d5fa7;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    height: 100%;
-    width: 220px;
-    font-size: 1.3rem;
+.header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.header-buttons button:hover{
-    background-color: #28AD56;
+.header-logo {
+  transform: translateY(15px);
+  height: 60px;
+  width: auto;
 }
 
-/*------------------estilos de  los tutorados-------------------------*/
- .img-container{
-    display: flex;
-    align-items: center;
-    max-width: 150px;
-    justify-content: space-between;
- }
+.header-title {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
 
- .img-container .header-logo{
+/* Botones */
+.header-buttons {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.header-buttons button {
+  background-color: #2d5fa7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 100%;
+  width: 180px;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+}
+
+.header-buttons button:hover {
+  background-color: #28AD56;
+}
+
+/* Imagen contenedor */
+.img-container {
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+  justify-content: space-between;
+}
+
+.img-container .header-logo {
   transform: translateY(24px);
- }
+}
 
+/* Buscador */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+  min-width: 220px;
+}
 
- /*-------------------estilos search-------------------------*/
+.search-container input {
+  width: 90%;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  padding-left: 20px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
 
- .search-container {
-    display: flex;
+.search-container button {
+  background-color: #28AD56;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #2d5fa7;
+}
+
+.search-container img {
+  padding-left: 10px;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .header-content {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 40%;
-  }
-  
-  .search-container input {
-    width: 90%;
-    height: 40px;
-    border-radius: 8px;
-    border: none;
-    padding-left: 20px;
-    font-size: 1rem;
-    margin-right: 10px;
-  }
-  
-  .search-container button {
-    background-color: #28AD56;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-container button:hover {
-    background-color: #2d5fa7; /* Cambia el color al pasar el mouse */
+    gap: 1rem;
   }
 
-  .search-container img{
-    padding-left: 10px;
+  .header-buttons {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
+
+  .header-buttons button {
+    width: 100%;
+    max-width: 250px;
+    font-size: 1rem;
+  }
+
+  .search-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-container input {
+    width: 70%;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-container button {
+    width: 90%;
+    max-width: 200px;
+  }
+}

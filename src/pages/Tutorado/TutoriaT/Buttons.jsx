@@ -1,7 +1,7 @@
 
 
 
-const Buttons = ({ handleClick, handleClick2 }) => {
+const Buttons = ({ handleClick, handleClick2, handleClick3, tutoradoInscrito}) => {
   return (
     <div className="buttons-content">
       <button
@@ -10,14 +10,17 @@ const Buttons = ({ handleClick, handleClick2 }) => {
       >
         Inscribirse
       </button>
-      <button
-        onClick={handleClick2}
-        className="btn-cancelar"
-      >
-        Cancelar <br/>Inscripcion
-      </button>
 
-        <button className="btn-notificaciones">
+      {tutoradoInscrito ? (
+        <button
+          onClick={handleClick2}
+          className="btn-cancelar"
+        >
+          Cancelar <br />Inscripcion
+        </button>
+      ) : <></>}
+
+        <button className="btn-notificaciones" onClick={handleClick3}>
           Activar Recordatorio
         </button>
     </div>

@@ -32,17 +32,7 @@
   margin: auto;
 }
 
-.calendario-dia {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  width: 150px;
-  height: 140px;
-  color: black;
-  font-weight: 400;
-  font-size: 18px;
-  padding: 5px;
-}
+
 
 .verde {
   background-color: rgba(40, 173, 86, .7); /* Verde */
@@ -53,38 +43,44 @@
 }
 
 .tutoria {
-  background-color: #ffc107;
+  background-color: #8eea5d;
   color: #000;
   font-weight: bold;
+  border: none;
+  margin-bottom: 0;
 }
 
-.calendario-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-}
+
 
 .calendario-dia {
-  background-color: #f0f0f0;
-  border-radius: 6px;
-  padding: 6px;
-  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 150px;
+  height: 140px;
+  color: black;
+  font-weight: 400;
   font-size: 12px;
+  padding: 0;
+  background-color: #f0f0f0;
+  text-align: center;
   min-height: 60px;
   position: relative;
 }
 
 .calendario-dia.verde {
-  background-color: #d0f0d0;
+  background-color: #94e994;
 }
 
 .calendario-dia.azul {
-  background-color: #d0e0f7;
+  background-color: #799ccd;
 }
 
 .calendario-dia.tutoria {
-  background-color: #fff8dc;
-  border: 2px solid #f5b041;
+  background-color: #b2ff9d;
+  border: 2px solid #212b25;
+  border: none;
+  z-index: 10;
 }
 
 .calendario-dia.tutoria:hover {
