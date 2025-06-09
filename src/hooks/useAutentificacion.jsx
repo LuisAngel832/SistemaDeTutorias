@@ -28,6 +28,7 @@ const useAutentificacion = () => {
       }
 
       const data = await response.json();
+      console.log(data);
       localStorage.setItem("token", data.token);
       localStorage.setItem("rol", data.rol);
       localStorage.setItem("matricula", matricula);

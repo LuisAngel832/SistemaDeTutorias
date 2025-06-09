@@ -5,17 +5,17 @@ const FormInfoTutorias = ({
   setFecha,
   estado,
   nrc,
+  setNrc,
   edificio,
   setEdificio,
   aula,
   setAula,
-  horariosDisponibles,
-  sertHorario,
-  
-  materias
+  horariosDisponibles = [],
+  setHorario,
+  materias = [],
 }) => {
   return (
-    <form className="info-tutoria-form" >
+    <form className="info-tutoria-form">
       <label className="info-tutoria-label">Fecha</label>
       <input
         className="info-tutoria-input"
@@ -27,16 +27,18 @@ const FormInfoTutorias = ({
       <label className="info-tutoria-label">Horario</label>
       <select
         className="info-tutoria-input select"
-        onChange={(e) => sertHorario(e.target.value)}
+        onChange={(e) => setHorario(e.target.value)}
+        defaultValue=""
       >
+        <option value="" disabled>
+          Selecciona un horario
+        </option>
         {horariosDisponibles.map((horario) => (
-          <option key={horario.idHorario} value={horario.idHorario }>
-            {horario.dia} - {horario.horaInicio} - {horario.horaFin} 
+          <option key={horario.idHorario} value={horario.idHorario}>
+            {horario.dia} - {horario.horaInicio} - {horario.horaFin}
           </option>
         ))}
       </select>
-
-      
 
       <label className="info-tutoria-label">Estado</label>
       <input
@@ -50,6 +52,7 @@ const FormInfoTutorias = ({
       <select
         className="info-tutoria-input select"
         value={nrc}
+        onChange={(e) => setNrc(e.target.value)}
       >
         <option value="">Selecciona la materia</option>
         {materias.map((materia) => (
