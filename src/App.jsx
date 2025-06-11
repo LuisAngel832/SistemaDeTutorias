@@ -5,6 +5,7 @@ import FinalizarTutoria from './pages/Tutor/InfoTutoria/FinalizarTutoria';
 import Tutoria from './pages/Tutor/Tutoria/Tutoria';
 import AgregarHorario from './pages/Tutor/AgregarHorario/AgregarHorario';
 import MainHorario from './pages/Tutor/AgregarHorario/Mainhorario';
+import Registro from './pages/Registro/Registro';
 
 
 

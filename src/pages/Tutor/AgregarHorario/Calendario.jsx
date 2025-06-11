@@ -39,7 +39,16 @@ const Calendario = ({ fecha, setFecha }) => {
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
       <Box
 
-        sx={boxStyles}
+        sx={{
+    backgroundColor: "white",
+    borderRadius: "20px",
+    overflow: "hidden",
+    width: "100%",
+    maxWidth: "320px", // Limita el ancho del calendario
+    margin: "0 auto", // Centrado
+    transform: "scale(0.9)", // Escalado para móvil
+    transformOrigin: "top center", // Escala desde arriba
+  }}
 
       >
         <StaticDatePicker
