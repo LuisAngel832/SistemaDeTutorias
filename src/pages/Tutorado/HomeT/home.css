@@ -1,3 +1,19 @@
+.home-T{
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+
+.main-contnent-home-tutorado{
+  padding-top: 80px;
+}
+
 .home-tutorado {
   display: flex;
   flex-direction: column;
@@ -14,8 +30,27 @@
   grid-template-columns: repeat(7, 1fr);
   width: fit-content;
   margin: auto;
-  margin-top: 100px;
 }
+
+
+
+.verde {
+  background-color: rgba(40, 173, 86, .7); /* Verde */
+}
+
+.azul {
+  background-color: rgba(0, 84, 159, .7); /* Azul */
+}
+
+.tutoria {
+  background-color: #8eea5d;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 0;
+}
+
+
 
 .calendario-dia {
   display: flex;
@@ -25,14 +60,64 @@
   height: 140px;
   color: black;
   font-weight: 400;
-  font-size: 18px;
-  padding: 5px;
+  font-size: 12px;
+  padding: 0;
+  background-color: #f0f0f0;
+  text-align: center;
+  min-height: 60px;
+  position: relative;
 }
 
-.verde {
-  background-color: rgba(40, 173, 86, 1); /* Verde */
+.calendario-dia.verde {
+  background-color: #94e994;
 }
 
-.azul {
-  background-color: rgba(0, 84, 159, 1); /* Azul */
+.calendario-dia.azul {
+  background-color: #799ccd;
+}
+
+.calendario-dia.tutoria {
+  background-color: #b2ff9d;
+  border: 2px solid #212b25;
+  border: none;
+  z-index: 10;
+}
+
+.calendario-dia.tutoria:hover {
+  background-color: #88ec88;
+  cursor: pointer;
+  border: 2px solid #fff8dc ;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.link{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.tutoria-info {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #333;
+  padding: 2px 4px;
+  text-decoration: none;
+  font-Style: none;
+  
+}
+
+
+
+
+.calendario-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calendario-header {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
 }

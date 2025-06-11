@@ -1,78 +1,87 @@
 import "./tutoria.css";
+
 import "./tutoriaR.css";
-import Button from './../../../components/Tutor/ButtonTrue';
-import CardAlumno from './CardAlumno'
-import Header from './../../../components/Tutor/Header';
+import Button from "./../../../components/Tutor/ButtonTrue";
+import CardAlumno from "./CardAlumno";
+import Header from "./../../../components/Tutor/Header";
+import { useParams, Link } from "react-router-dom";
+
 import { useState } from "react";
-
-
+import { useTutoriaDetail } from "../../../hooks/useTutoriaDetail";
 
 const Tutoria = () => {
-  const [FinalizarTutoria, setFinalizarTutoria] = useState(false  );
+  const { id } = useParams();
+  const [finalizar, setFinalizar] = useState(false);
+  const { tutoria, loading, finalizarTutoria } = useTutoriaDetail(id);
+
+  const handleClickFinalizar = () => setFinalizar(!finalizar);
+
+  const handleConfirmFinalizar = async () => {
+    await finalizarTutoria();
+    window.location.reload(); // o redirigir si se prefiere
+  };
+
+  if (loading) return <p className="cargando">Cargando tutoría...</p>;
+
   return (
     <>
-    <Header />
-    {FinalizarTutoria ?(
-    <section className="finalizar-tutoria-content">
-      <div className="finalizar-tutoria">
-        <h1>¿Finalizar Tutoria?</h1>
-        <div className="buttons">
-          <Button text='Cancelar'  type={false} />
-          <Button text='Finalizar' type={true}  />
-        </div>
-      </div>
-    </section>
-    ):(<></>)}
-      <section className="tutoria-content">
-        <div className="tutoria">
-          <h2>Tutoria</h2>
-          <div className="card">
-            <div className="card-item">
-              <h4 className="card-item-title">Hora</h4>
-              <p className="card-item-text-important">8:00</p>
-            </div>
-            <div className="card-item">
-              <h4 className="card-item-title">Estado</h4>
-              <p className="card-item-text-important">programada</p>
-            </div>
-            <div className="card-item">
-              <h4 className="card-item-title">Materia</h4>
-              <p className="card-item-text">Base de datos</p>
-            </div>
-            <div className="card-item">
-              <h4 className="card-item-title">Nrc</h4>
-              <p className="card-item-text">30892</p>
-            </div>
-            <div className="card-item">
-              <h4 className="card-item-title">tutor</h4>
-              <p className="card-item-text">Juan Carlos Manzanillo</p>
-            </div>
-            <div className="card-item">
-              <h4 className="card-item-title">salon</h4>
-              <p className="card-item-text">16</p>
-            </div>
-            <div className="card-item">
-              <h4 className="card-item-title">Edificio</h4>
-              <p className="card-item-text">Edificio 2</p>
+      <Header />
+
+      {finalizar && (
+        <section className="finalizar-tutoria-content">
+          <div className="finalizar-tutoria">
+            <h1>¿Finalizar Tutoria?</h1>
+            <div className="buttons">
+              <Button text="Cancelar" type={false} onClick={handleClickFinalizar} />
+              <Button text="Finalizar" type={true} onClick={handleConfirmFinalizar} />
             </div>
           </div>
-          <div className="buttons">
-            <Button text="Finalizar" type={true} />
-            <Button text="Editar" type={true} />
+        </section>
+      )}
+
+      {tutoria.horario && (
+        <section className="tutoria-content">
+          <div className="tutoria">
+            <h2>Tutoría</h2>
+            <div className="card">
+              {[
+                { label: "Hora", value: tutoria.horario?.horaInicio },
+                { label: "Estado", value: tutoria.estado },
+                { label: "Materia", value: tutoria.materia?.nombreMateria },
+                { label: "NRC", value: tutoria.materia?.nrc },
+                { label: "Tutor", value: tutoria.horario?.tutor?.nombre },
+                { label: "Salón", value: tutoria.aula },
+                { label: "Edificio", value: tutoria.edificio },
+              ].map(({ label, value }) => (
+                <div className="card-item" key={label}>
+                  <h4 className="card-item-title">{label}</h4>
+                  <p className="card-item-text">{value || "..."}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="buttons">
+              <Button text="Finalizar" type={true} onClick={handleClickFinalizar} />
+              <Link to={`/tutor/info-tutoria/${id}`}>
+                <Button text="Editar" type={true} />
+              </Link>
+            </div>
           </div>
-        </div>
 
-        <div className="tutoria-alumnos">
-          <h2>Tutorados</h2>
-
-          <ul className="alumno-list">
-            <CardAlumno matricula="123456" nombre="Juan Carlos Manzanillo" />
-            <CardAlumno matricula="123456" nombre="Juan Carlos Manzanillo" />
-            <CardAlumno matricula="123456" nombre="Juan Carlos Manzanillo" />
-          </ul>
-        </div>
-      </section>
-      
+          <div className="tutoria-alumnos">
+            <h2>Tutorados</h2>
+            <ul className="alumno-list">
+              {tutoria.tutorados?.length > 0 ? (
+                tutoria.tutorados.map((al) => (
+                  <CardAlumno key={al.matricula} matricula={al.matricula} nombre={al.nombre} />
+                ))
+              ) : (
+                <p>No hay tutorados registrados</p>
+              )}
+            </ul>
+          </div>
+        </section>
+      )}
     </>
   );
 };

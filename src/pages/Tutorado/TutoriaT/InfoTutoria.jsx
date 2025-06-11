@@ -1,23 +1,31 @@
-const InfoTutoria = () => {
-  const tutoria = {
-    id: 1,
-    nombreTutoria: "Tutoria 1",
-    tutor: "Juan Pérez",
-    fecha: "2023-10-01",
-    hora: "10:00",
-    cuposDisponibles: 5,
-    ubicacion: "Aula 101",
-    descripcion: "Descripción de la tutoría 1",
-  };
+const InfoTutoria = ({ tutoria }) => {
+  if (!tutoria?.horario?.tutor || !tutoria?.materia) {
+    return <p>Cargando información de la tutoría...</p>;
+  }
+
+  const formatearHora = (hora) => hora?.slice(0, 5);
 
   const datos = [
-    { label: "Nombre", value: tutoria.nombreTutoria },
-    { label: "Tutor", value: tutoria.tutor },
+    { label: "ID Tutoría", value: tutoria.idTutoria },
+    {
+      label: "Tutor",
+      value: `${tutoria.horario.tutor.nombre} ${tutoria.horario.tutor.apellidoP} ${tutoria.horario.tutor.apellidoM}`,
+    },
+    { label: "Materia", value: tutoria.materia.nombreMateria },
     { label: "Fecha", value: tutoria.fecha },
-    { label: "Hora", value: tutoria.hora },
-    { label: "Cupos Disponibles", value: tutoria.cuposDisponibles },
-    { label: "Ubicación", value: tutoria.ubicacion },
-    { label: "Descripción", value: tutoria.descripcion },
+    {
+      label: "Hora",
+      value: `${formatearHora(tutoria.horario.horaInicio)} - ${formatearHora(tutoria.horario.horaFin)}`,
+    },
+    {
+      label: "Cupos Disponibles",
+      value: `${5 - (tutoria.tutorados?.length || 0)} disponibles`,
+    },
+    {
+      label: "Ubicación",
+      value: `Edificio ${tutoria.edificio}, Aula ${tutoria.aula}`,
+    },
+    { label: "Estado", value: tutoria.estado },
   ];
 
   return (
@@ -25,10 +33,10 @@ const InfoTutoria = () => {
       <div className="tutoria-card">
         {datos.map((item, index) => (
           <p
-            key={index}
-            className={index % 2 === 0 ? 'fondo-gris' : 'fondo-gris-claro'}
+            key={item.label}
+            className={index % 2 === 0 ? "fondo-gris" : "fondo-gris-claro"}
           >
-            {item.label}: {item.value}
+            <strong>{item.label}:</strong> {item.value}
           </p>
         ))}
       </div>

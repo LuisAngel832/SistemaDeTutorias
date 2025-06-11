@@ -1,57 +1,27 @@
   import "./login.css";
   import logo from "../../assets/img/logo.png";
-
-  import { useNavigate } from "react-router-dom";
   import "./Login_respon.css";
-  import { use, useState } from "react";
+  import {  useState } from "react";
   import { Link } from "react-router-dom";
+  import useAutentificacion from "../../hooks/useAutentificacion";
 
 
 
   const LogIn = () => {
-    const navigate = useNavigate();
+    const {login} = useAutentificacion();
     const [matricula, setMatricula] = useState("");
-    const [contraseña, setContrasenia] = useState("");
+    const [contrasena, setContrasena] = useState("");
     const [error, setError] = useState("");
 
     const handleLogin = async (e) => {
       e.preventDefault();
-
-      try {
-        const response = await fetch("https://backtutorias.onrender.com/auth/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            matricula: matricula,
-            password: contraseña
-          })
-        });
-
-        if (!response.ok) {
-          const errorText = await response.text();
-          setError(errorText);
-          return;
-        }
-
-        const data = await response.json();
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("rol", data.rol);
-        localStorage.setItem("matricula", matricula);
-
-        
-        if (data.rol === "tutor") {
-          navigate("/tutor/home");
-        } else if (data.rol === "tutorado") {
-          navigate("/tutorado/home");
-        }
-
-      } catch (err) {
-        console.error(err);
-        setError("Error al conectar con el servidor");
+      if(!matricula || !contrasena){
+        setError("Todos los campos son obligatorios");
+        return
       }
-    };
+
+      login(matricula, contrasena, setError);
+    }
 
     return (
       <div className="Login">
@@ -73,8 +43,8 @@
               type="password"
               id="contraseña"
               className="login-input"
-              value={contraseña}
-              onChange={(e) => setContrasenia(e.target.value)}
+              value={contrasena}
+              onChange={(e) => setContrasena(e.target.value)}
             />
 
             <button type="submit" className="login-button-confirm" onClick={handleLogin}>
