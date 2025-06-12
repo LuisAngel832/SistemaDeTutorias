@@ -1,120 +1,134 @@
-.tutorias-tutorados{
-    margin-top:80px ;
+.tutorias-tutorados {
+    margin-top: 80px;
+    padding: 20px;
 }
 
-.main-content-tutorias{
+.main-content-tutorias {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-
 
 .card-tutoria-content {
-    height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  background-color: rgba(40, 173, 86, 1);
-  font-family: "Montserrat", sans-serif;
-  margin: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease;
 }
 
-.card-tutoria-content h2{
-    width: 100%;
-    background-color: rgba(40, 173, 86, 1);
-    text-align: center;
-    font-size: 40px;
-    color: white;
+.card-tutoria-content:hover {
+    transform: translateY(-5px);
+}
+
+.card-tutoria-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.card-info-tutoria {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card-info-tutoria p {
+    font-size: 16px;
+    color: #666;
     margin: 0;
 }
 
-
-.card-tutoria-content .card-info-tutoria {
-    box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding-left: 10%;
-  background-color: rgba(0, 83, 159, 1);
-  font-size: 36px;
-  color: white;
+.card-info-tutoria span {
+    color: #333;
+    font-weight: 500;
 }
 
-.card-tutoria-content .card-info-tutoria p{
-    padding: 20px 0;
+.card-info-tutoria .fecha {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-info-tutoria .fecha span {
+    color: #666;
+    font-size: 14px;
+}
+
+.card-info-tutoria .cupos {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #666;
+}
+
+.card-info-tutoria .cupos span {
+    font-weight: 500;
+    color: #333;
+}
+
+.card-info-tutoria .cupos .disponibles {
+    color: #28AD56;
+}
+
+.card-info-tutoria .cupos .ocupados {
+    color: #ff4d4d;
+}
+
+.card-info-tutoria .cupos .total {
+    color: #666;
 }
 
 .card-tutoria-content button {
-    background-color: rgba(40, 173, 86, 1);
+    background: #28AD56;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 36px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
-    width: 100%;
+    transition: background-color 0.3s ease;
+    width: fit-content;
 }
 
-/* ✅ Estilos responsivos comunes para el apartado de tutorado */
+.card-tutoria-content button:hover {
+    background: #218a48;
+}
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .main-content,
-  .main-content-perfil,
-  .info-tutoria,
-  .tutoria-card,
-  .mistutorias-content,
-  .card-tutoria-content {
-    padding: 1rem;
-    width: 100%;
-    font-size: 1rem;
-  }
+    .main-content-tutorias {
+        padding: 10px;
+    }
 
-  .perfil-info-content div,
-  .card-info-tutoria,
-  .tutoria-card p {
-    font-size: 1rem !important;
-    padding: 10px 0;
-    width: 100% !important;
-  }
+    .card-tutoria-content {
+        padding: 15px;
+    }
 
-  .buttons-content {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
+    .card-tutoria-content h2 {
+        font-size: 20px;
+    }
 
-  .buttons-content button {
-    width: 90% !important;
-    font-size: 1rem;
-  }
+    .card-info-tutoria p {
+        font-size: 14px;
+    }
 
-  .card-tutoria-content h2 {
-    font-size: 1.5rem;
-  }
+    .card-info-tutoria .fecha span {
+        font-size: 12px;
+    }
 
-  .card-info-tutoria {
-    padding-left: 5%;
-  }
-
-  .tutoria-card p {
-    font-size: 1.1rem;
-  }
+    .card-tutoria-content button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
-  .perfil-info-content div,
-  .card-info-tutoria,
-  .tutoria-card p {
-    font-size: 0.9rem !important;
-  }
-
-  .buttons-content button {
-    font-size: 0.9rem;
-  }
-
-  .card-tutoria-content h2 {
-    font-size: 1.2rem;
-  }
+    .card-tutoria-content h2 {
+        font-size: 1.2rem;
+    }
 }

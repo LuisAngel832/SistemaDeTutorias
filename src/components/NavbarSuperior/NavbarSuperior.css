@@ -1,0 +1,54 @@
+.navbar-superior {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+.menu-icono {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.opciones-menu {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.opciones-menu button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.opciones-menu button:hover {
+  text-decoration: underline;
+}
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #1976d2;
+  z-index: 999;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Ocultar en pantallas grandes si quieres */
+  }
+}

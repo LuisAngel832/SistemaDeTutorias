@@ -1,0 +1,55 @@
+.calendar-container {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+}
+
+.calendar-container h2 {
+  margin-bottom: 1rem;
+  color: #1976d2;
+  text-align: center;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.5rem;
+}
+
+.fc .fc-button {
+  background-color: #1976d2;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.fc .fc-button-primary:not(:disabled):hover {
+  background-color: #1565c0;
+}
+
+/* 🔵 Estilo personalizado para los eventos */
+.fc-event.evento-personalizado {
+  background-color: #4D9DE0 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px;
+  padding: 2px 4px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* 📱 Responsive en móviles */
+@media (max-width: 768px) {
+  .fc .fc-button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.1rem;
+  }
+
+  .fc-button-group {
+    gap: 4px;
+  }
+}

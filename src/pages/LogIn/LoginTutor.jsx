@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './LoginTutor.css';
 
 const LoginTutor = () => {
   const [correo, setCorreo] = useState('');
@@ -7,29 +8,34 @@ const LoginTutor = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Iniciando sesión con:', correo, contrasena);
-
   };
 
   return (
     <div className="login-container">
-      <h2>Iniciar Sesión - Tutor</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Correo institucional"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={contrasena}
-          onChange={(e) => setContrasena(e.target.value)}
-          required
-        />
-        <button type="submit">Iniciar Sesión</button>
-      </form>
+      <div className="login-card">
+        <h1 className="login-title">Iniciar Sesión</h1>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Correo institucional"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+            required
+            className="login-input"
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+            required
+            className="login-input"
+          />
+          <button type="submit" className="login-button">
+            Iniciar Sesión
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
