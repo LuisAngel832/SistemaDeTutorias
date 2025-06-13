@@ -1,0 +1,106 @@
+/* ✅ Estilos generales para pantallas pequeñas y medianas */
+
+/* Hacemos que el contenedor de las tarjetas se adapte al tamaño de la pantalla */
+.contenedorTarjetasTotorias {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);  /* Cambié de 3 columnas a 1 columna en pantallas pequeñas */
+  gap: 1.5rem;
+}
+
+/* Las tarjetas se ajustan al 100% del ancho disponible */
+.card {
+  max-width: 100%;
+  padding: 10px 20px;
+}
+
+/* Los elementos dentro de las tarjetas se ajustan */
+.card-item {
+  width: 100%; /* Cambio a 100% para que ocupen todo el ancho disponible */
+  margin-top: 10px; /* Más espacio entre los elementos */
+}
+
+/* Ajustamos el tamaño de las fuentes en las tarjetas */
+.card-item-title {
+  font-size: 16px;  /* Reducimos el tamaño de la fuente para dispositivos pequeños */
+}
+
+.card-item-text-important {
+  font-size: 16px;  /* Reducimos el tamaño de la fuente para dispositivos pequeños */
+}
+
+.card-item-text {
+  font-size: 14px;  /* Reducimos el tamaño de la fuente para dispositivos pequeños */
+}
+
+/* Ajustes para el título principal */
+.tutoria-title {
+  font-size: 30px;  /* Reducimos el tamaño del título */
+}
+
+/* ✅ Estilos para pantallas medianas (tabletas) */
+
+/* A partir de pantallas de tamaño mediano, configuramos dos columnas */
+@media (min-width: 768px) {
+  .contenedorTarjetasTotorias {
+    grid-template-columns: repeat(2, 1fr);  /* Dos columnas para pantallas medianas */
+  }
+
+  .card {
+    max-width: 90%;  /* Ajuste del tamaño para que las tarjetas no sean demasiado grandes */
+    padding: 15px 30px;
+  }
+
+  .card-item {
+    width: 48%;  /* Aumento el tamaño de los elementos dentro de las tarjetas */
+  }
+
+  .card-item-title {
+    font-size: 18px;  /* Ajustamos el tamaño de la fuente */
+  }
+
+  .card-item-text-important {
+    font-size: 17px;
+  }
+
+  .card-item-text {
+    font-size: 15px;
+  }
+
+  .tutoria-title {
+    font-size: 36px;  /* Ajustamos el tamaño del título para que sea un poco más grande */
+  }
+}
+
+/* ✅ Estilos para pantallas grandes (escritorios y pantallas de mayor tamaño) */
+
+/* Para pantallas más grandes, mantenemos el diseño original de 3 columnas */
+@media (min-width: 1024px) {
+  .contenedorTarjetasTotorias {
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas */
+  }
+
+  .card {
+    max-width: 450px;  /* Tamaño máximo de las tarjetas */
+    padding: 20px 40px;
+  }
+
+  .card-item {
+    width: 40%;  /* Restablecemos el tamaño de los elementos dentro de las tarjetas */
+  }
+
+  .card-item-title {
+    font-size: 20px;
+  }
+
+  .card-item-text-important {
+    font-size: 18px;
+  }
+
+  .card-item-text {
+    font-size: 16px;
+  }
+
+  .tutoria-title {
+    font-size: 40px;  /* Mantenemos el tamaño del título para pantallas grandes */
+  }
+}

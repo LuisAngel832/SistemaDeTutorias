@@ -21,12 +21,9 @@ const MainCrearT = () => {
     handleSubmit,
   } = useCrearTutoria();
 
-
   const handleClick = () => {
     setShowModal(false);
   };
-
-
 
   return (
     <>
@@ -39,25 +36,27 @@ const MainCrearT = () => {
         />
       )}
 
-      <div className="crear-tutoria-container">
-        <h2 className="crear-tutoria-title">Crear Tutoria</h2>
-        <div className="crear-tutoria-content">
-          <FormCrearTutoria
-            nrcMateria={nrcMateria}
-            setNrcMateria={setNrcMateria}
-            horario={horario}
-            setHorario={setHorario}
-            fecha={fecha}
-            setFecha={setFecha}
-            edificio={edificio}
-            setEdificio={setEdificio}
-            aula={aula}
-            setAula={setAula}
-          />
-          <div className="button-crear-tutoria">
-            <button className="btn-aceptar" onClick={handleSubmit}>
-              Crear
-            </button>
+      <div className="main-crear-tutoria">
+        <div className="crear-tutoria-container">
+          <h2 className="crear-tutoria-title">Crear Tutoria</h2>
+          <div className="crear-tutoria-content">
+            <FormCrearTutoria
+              nrcMateria={nrcMateria}
+              setNrcMateria={setNrcMateria}
+              horario={horario}
+              setHorario={setHorario}
+              fecha={fecha}
+              setFecha={setFecha}
+              edificio={edificio}
+              setEdificio={setEdificio}
+              aula={aula}
+              setAula={setAula}
+            />
+            <div className="button-crear-tutoria">
+              <button className="btn-aceptar" onClick={handleSubmit}>
+                Crear
+              </button>
+            </div>
           </div>
         </div>
       </div>

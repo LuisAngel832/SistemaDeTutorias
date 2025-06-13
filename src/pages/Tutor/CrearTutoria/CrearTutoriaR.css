@@ -1,0 +1,19 @@
+/* ✅ Escala el título del formulario */
+.crear-tutoria-title {
+    font-size: clamp(1.8rem, 4vw, 2.25rem);
+  }
+  
+  /* ✅ Escala las etiquetas */
+  .crear-tutoria-label {
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+  
+  /* ✅ Escala los inputs */
+  .crear-tutoria-input {
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+    height: clamp(36px, 5vw, 42px);
+    padding: clamp(8px, 1vw, 10px);
+  }
+  
+  
+  

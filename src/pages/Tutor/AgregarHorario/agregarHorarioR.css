@@ -1,0 +1,91 @@
+@media (max-width: 480px) {
+  .main-horario {
+    width: 95%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .main-horario > h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .main-horario-content {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .select-fecha {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .select-hora-min {
+    width: 100%;
+    align-items: center;
+  }
+
+  .select-hora {
+    width: 90%;
+    height: auto;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .select-hora-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .select-hora-input {
+    font-size: 1.5rem;
+    width: 60px;
+    height: 50px;
+  }
+
+  .select-hora-puntos {
+    font-size: 2.5rem;
+  }
+
+  .button-content {
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  /* Ajustes para el calendario MUI */
+  .MuiDateCalendar-root {
+    transform: scale(0.8);
+  }
+
+  .MuiPickersLayout-root {
+    max-width: 100% !important;
+  }
+
+  .MuiPickersCalendarHeader-root,
+  .MuiDayCalendar-weekContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiPickersLayout-root {
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .MuiDateCalendar-root {
+    width: 100% !important;
+  }
+
+  .MuiPickersSlideTransition-root {
+    min-height: 300px; /* control sobre la altura interna del calendario */
+  }
+
+  .MuiDayCalendar-weekContainer {
+    justify-content: center;
+  }
+}

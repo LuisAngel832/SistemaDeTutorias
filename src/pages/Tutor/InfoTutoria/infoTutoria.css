@@ -1,21 +1,17 @@
 .info-tutoria-container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    padding-top: 80px;
 }
 
-.info-tutoria-tutor{
+.main-content-info-tutoria{
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
+    padding-top: 80px
 }
 
 .info-tutoria-form{
