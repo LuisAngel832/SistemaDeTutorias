@@ -22,6 +22,7 @@ export const useTutoriaDetail = (id) => {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Error al obtener tutoría");
       setTutoria(data.data);
+      console.log(data);
     } catch (error) {
       console.error(error);
     } finally {
