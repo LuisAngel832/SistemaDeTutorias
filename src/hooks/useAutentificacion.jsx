@@ -76,7 +76,16 @@ const useAutentificacion = () => {
 
     
   };
-  return { login, registro };
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("rol");
+    localStorage.removeItem("matricula");
+    localStorage.removeItem("nombre");
+    localStorage.removeItem("correo");
+    navigate("/login");
+  }
+  return { login, registro, logout };
 };
 
 export default useAutentificacion;

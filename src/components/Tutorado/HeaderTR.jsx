@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './HeaderTR.css';
 
 function Header() {
@@ -20,16 +21,21 @@ function Header() {
             <span></span>
             <span></span>
           </button>
-          <div className="page-name">Panel de Control</div>
+          <p className='header-title'>Panel de control</p>
         </header>
   
         {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
   
         <aside className={`sidebar left ${menuOpen ? 'open' : ''}`}>
           <nav>
-            <button onClick={() => setMenuOpen(false)}>Detalles de tutorías</button>
-            <button onClick={() => setMenuOpen(false)}>Tutorías</button>
-            <button onClick={() => setMenuOpen(false)}>Mi Perfil</button>
+          <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+            <Link to='/tutorado/home'><button onClick={() => setMenuOpen(false)}>Home</button></Link>
+            <Link to='/tutorado/tutorias'><button onClick={() => setMenuOpen(false)}>Tutorías</button></Link>
+            <Link to='/tutorado/perfil'><button onClick={() => setMenuOpen(false)}>Mi Perfil</button></Link>
           </nav>
         </aside>
       </>
