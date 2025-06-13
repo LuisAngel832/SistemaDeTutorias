@@ -1,0 +1,62 @@
+[33med300e2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfrontapptutorado[m[33m)[m chek rama angel-> git reset --hard origin/main
+[33ma4a533b[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mLuis[m[33m)[m Merge pull request #24 from LuisAngel832/Luis
+[33m93c5626[m[33m ([m[1;31morigin/Luis[m[33m)[m Creacion y funcionamiento de las paguinas actualizar contraseña
+[33m0f84f62[m[33m ([m[1;31morigin/frontapptutorado[m[33m)[m Cambios en el apartado tutorado
+[33mbd14bf2[m Merge pull request #23 from LuisAngel832/Luis
+[33m65b310b[m code refactor complete
+[33m07f2914[m Merge pull request #22 from LuisAngel832/Luis
+[33m09dffb3[m refactor code login and register
+[33mc258ebf[m Merge pull request #21 from LuisAngel832/Luis
+[33m3de9f40[m Conexion de tutorados a base de datos
+[33m7263863[m conexion con la base de datos
+[33m68a9106[m Merge pull request #20 from LuisAngel832/Luis
+[33m8227b98[m Agrega responsividad y mejoras en frontend tutorado
+[33m13a3852[m Merge branch 'main' of https://github.com/LuisAngel832/SistemaDeTutorias into frontapptutorado
+[33m018ad58[m Merge pull request #19 from LuisAngel832/Luis
+[33m7c84a88[m creacion de la paguina agregar horario
+[33md523f2c[m Merge branch 'main' of https://github.com/LuisAngel832/SistemaDeTutorias into frontapptutorado
+[33mdf2aa8c[m cambios nulos no hacer request
+[33m63d352f[m Primer commit en frontapptutorado
+[33ma9fb0db[m Merge pull request #18 from LuisAngel832/Luis
+[33mfe82f60[m fix bugs
+[33m2747c52[m Merge pull request #17 from LuisAngel832/Luis
+[33m648356f[m Merge branch 'main' into Luis
+[33m2a7a4c6[m coneccion a la api login y registro
+[33mfc93432[m Merge pull request #16 from LuisAngel832/Daniel
+[33med75f42[m Header v3
+[33m713c92e[m Push 2
+[33m562ebca[m Conflictos resueltos en imports
+[33m95c68ab[m Guardar rama Daniel
+[33m6992040[m Merge pull request #15 from LuisAngel832/Luis
+[33m07ed43b[m update page registro add matricula input
+[33mdfcf83c[m test api registro
+[33m796b289[m Merge pull request #14 from LuisAngel832/Luis
+[33m025d6e2[m Merge pull request #13 from LuisAngel832/Luis
+[33m7bb4085[m update
+[33mee1bd7f[m Merge pull request #12 from LuisAngel832/Luis
+[33m56b9c34[m Ajustes de pantallas
+[33m4566f0d[m Finalizacion de pages tutorado
+[33mbd349c1[m Merge pull request #11 from LuisAngel832/Luis
+[33md9871e0[m actualizacion de la page tutorias tutorados
+[33m9820860[m avance del paguina tutorias tutorado
+[33m7e9fb7d[m Merge pull request #10 from LuisAngel832/Luis
+[33m323e8c7[m Avance en el diseño de las paguinas tutorado
+[33mf324c1b[m Merge pull request #9 from LuisAngel832/Luis
+[33m332f22c[m creacion del header de tutorado
+[33mcc6ae81[m Actualizacion de la paguina de tutorados
+[33m1787627[m Merge pull request #8 from LuisAngel832/Luis
+[33m4b0859d[m Merge pull request #7 from LuisAngel832/Luis
+[33m28661d6[m Pulido de la refactorizacion y agregacion del router
+[33m3081573[m Refactorizacion de la estructura del proyecto y update de los diseños
+[33m8d3dde1[m Merge pull request #6 from LuisAngel832/Luis
+[33mf8f8750[m creacion de page Tutoria
+[33m2c4264a[m Merge pull request #5 from LuisAngel832/Luis
+[33mc2d0c68[m Merge pull request #4 from LuisAngel832/Luis
+[33m75dca8b[m creacion de la paguina crearTutorias
+[33mec98f3b[m Merge pull request #3 from LuisAngel832/Luis
+[33m5d6a59b[m Creacion de la paguina principal home
+[33m91724de[m Merge pull request #2 from LuisAngel832/Luis
+[33mc93bad6[m creacion de header
+[33mcc0296e[m Merge pull request #1 from LuisAngel832/Luis
+[33meaf2369[m creacion de login
+[33ma8cf6ef[m[33m ([m[1;32mmain[m[33m)[m Creacion del proyecto

@@ -1,58 +1,63 @@
-.tutorias-tutorados{
-    margin-top:80px ;
-}
-
-.main-content-tutorias{
+.main-content-tutorias {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-.card-tutoria-content {
-    height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  background-color: rgba(40, 173, 86, 1);
-  font-family: "Montserrat", sans-serif;
-  margin: 2rem;
-}
-
-.card-tutoria-content h2{
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .card-tutoria-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: rgba(40, 173, 86, 1);
+    font-family: "Montserrat", sans-serif;
+    margin: 2rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-tutoria-content h2 {
     width: 100%;
     background-color: rgba(40, 173, 86, 1);
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(22px, 5vw, 30px);
     color: white;
     margin: 0;
-}
-
-
-.card-tutoria-content .card-info-tutoria {
+    padding: 1rem;
+  }
+  
+  .card-tutoria-content .card-info-tutoria {
     box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding-left: 10%;
-  background-color: rgba(0, 83, 159, 1);
-  font-size: 36px;
-  color: white;
-}
-
-.card-tutoria-content .card-info-tutoria p{
-    padding: 20px 0;
-}
-
-.card-tutoria-content button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    background-color: rgba(0, 83, 159, 1);
+    font-size: clamp(16px, 3vw, 28px);
+    color: white;
+  }
+  
+  .card-tutoria-content .card-info-tutoria p {
+    margin: 10px 0;
+  }
+  
+  .card-tutoria-content button {
     background-color: rgba(40, 173, 86, 1);
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 36px;
+    padding: 1rem;
+    font-size: clamp(16px, 3.5vw, 24px);
     cursor: pointer;
     width: 100%;
-}
+    transition: background-color 0.2s ease;
+  }
+  
+  .card-tutoria-content button:hover {
+    background-color: #2eaf5f;
+  }
+  

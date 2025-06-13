@@ -1,4 +1,4 @@
-.home-T{
+.home-T {
   width: 100%;
   height: 100dvh;
   display: flex;
@@ -10,62 +10,57 @@
   padding-top: 80px;
 }
 
-.main-contnent-home-tutorado{
-  padding-top: 80px;
-}
-
 .home-tutorado {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   font-family: "Montserrat", sans-serif;
 }
 
+.calendario-container {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.calendario-header {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
 
 .calendario-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  width: fit-content;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 4px;
+  width: 100%;
+  max-width: 1000px;
   margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
 }
-
-
-
-.verde {
-  background-color: rgba(40, 173, 86, .7); /* Verde */
-}
-
-.azul {
-  background-color: rgba(0, 84, 159, .7); /* Azul */
-}
-
-.tutoria-tutorado {
-  background-color: #8eea5d;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  margin-bottom: 0;
-}
-
-
 
 .calendario-dia {
   display: flex;
+  flex-direction: column;
   justify-content: start;
   align-items: start;
-  width: 150px;
-  height: 140px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   color: black;
   font-weight: 400;
   font-size: 12px;
-  padding: 0;
   background-color: #f0f0f0;
-  text-align: center;
-  min-height: 60px;
+  padding: 6px;
   position: relative;
+  border-radius: 4px;
+  box-sizing: border-box;
+  min-height: 80px;
 }
 
 .calendario-dia.verde {
@@ -76,27 +71,19 @@
   background-color: #799ccd;
 }
 
-.calendario-dia.tutoria {
+.calendario-dia.tutoria-tutorado {
   background-color: #b2ff9d;
-  border: 2px solid #212b25;
   border: none;
   z-index: 10;
+  transition: transform 0.2s ease;
 }
 
-.calendario-dia.tutoria:hover {
+.calendario-dia.tutoria-tutorado:hover {
   background-color: #88ec88;
   cursor: pointer;
-  border: 2px solid #fff8dc ;
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
+  border: 2px solid #fff8dc;
+  transform: scale(1.05);
 }
-
-.link{
-  text-decoration: none;
-  color: inherit;
-}
-
-
 
 .tutoria-info {
   margin-top: 4px;
@@ -104,20 +91,27 @@
   color: #333;
   padding: 2px 4px;
   text-decoration: none;
-  font-Style: none;
-  
+  font-style: normal;
+  word-break: break-word;
 }
 
-
-
-
-.calendario-container {
-  text-align: center;
-  margin-bottom: 20px;
+.link {
+  text-decoration: none;
+  color: inherit;
 }
 
-.calendario-header {
-  font-size: 24px;
-  margin-bottom: 10px;
-  text-transform: capitalize;
+/* Opcional: responsive en pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+  .calendario-header {
+    font-size: 20px;
+  }
+
+  .tutoria-info {
+    font-size: 9px;
+  }
+
+  .calendario-dia {
+    font-size: 11px;
+    padding: 4px;
+  }
 }

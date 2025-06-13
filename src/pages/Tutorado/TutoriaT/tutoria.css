@@ -1,131 +1,128 @@
 .tutoria-tutorados {
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    padding-top: 80px;
-    height: 100vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Botones principales */
+.buttons-content {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.buttons-content button {
+  flex: 1 1 200px;
+  max-width: 250px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  cursor: pointer;
+  min-width: 160px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-inscribirse {
+  background-color: rgba(40, 173, 86, 1);
+  color: white;
+}
+
+.btn-cancelar {
+  background-color: rgba(255, 0, 0, 1);
+  color: white;
+}
+
+.btn-notificaciones {
+  background-color: #007bff;
+  color: white;
+}
+
+.info-tutoria {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tutoria-card {
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.tutoria-card p {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  transition: background-color 0.2s ease-in-out;
+  word-wrap: break-word;
+}
+
+.fondo-gris {
+  background-color: #e6e0e9;
+}
+
+.fondo-gris-claro {
+  background-color: #f3edf7;
+}
+
+.tutoria-card strong {
+  color: #2d5fa7;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .main-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    gap: 2rem;
-    padding: 1rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Estilos para los botones */
+}
+
+/* 📱 Media Queries para pantallas pequeñas */
+@media (max-width: 740px) {
   .buttons-content {
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
+
   }
-  
+
   .buttons-content button {
-    flex: 1 1 200px;
-    max-width: 250px;
-    height: 60px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    min-width: 160px;
-    transition: all 0.2s ease-in-out;
+    width: 200px;
+    font-size: 1rem;
+    height: 50px;
   }
-  
-  .btn-inscribirse {
-    background-color: rgba(40, 173, 86, 1);
-    color: white;
-  }
-  
-  .btn-cancelar {
-    background-color: rgba(255, 0, 0, 1);
-    color: white;
-  }
-  
-  /* Info de la tutoría */
-  .info-tutoria {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Montserrat", sans-serif;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 1rem;
-  }
-  
+
   .tutoria-card {
-    background-color: #f5faff;
-    border: 2px solid #28ad56;
-    border-radius: 20px;
-    padding: 2rem;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  .tutoria-card p {
-    margin: 1rem 0;
     padding: 1rem;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    transition: background-color 0.2s ease-in-out;
-    word-wrap: break-word;
   }
-  
-  .fondo-gris {
-    background-color: #e6e0e9;
+
+  .tutoria-card p {
+    font-size: 0.95rem;
+    padding: 0.75rem;
   }
-  
-  .fondo-gris-claro {
-    background-color: #f3edf7;
-  }
-  
-  .tutoria-card strong {
-    color: #2d5fa7;
-    font-weight: 600;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* 📱 Media Queries para pantallas pequeñas */
-  @media (max-width: 600px) {
-    .buttons-content {
-      flex-direction: column;
-      align-items: stretch;
-      padding: 0 1rem;
-    }
-  
-    .buttons-content button {
-      width: 100%;
-      font-size: 1rem;
-      height: 50px;
-    }
-  
-    .tutoria-card {
-      padding: 1rem;
-    }
-  
-    .tutoria-card p {
-      font-size: 1rem;
-    }
-  }
-  
+}

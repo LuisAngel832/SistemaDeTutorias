@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import useAutentificacion from '../../../hooks/useAutentificacion';
 
-const PerfilInfo = ({ nombre, correo }) => {
+const PerfilInfo = () => {
+  const {logout} = useAutentificacion();
   return (
     <section className="perfil-info-content">
       <div className="perfil-saludo">
@@ -9,8 +12,13 @@ const PerfilInfo = ({ nombre, correo }) => {
       <div className="perfil-correo">
         <p>Correo: {localStorage.getItem("correo")}</p>
       </div>
-      <div className="perfil-cambiar-contrasena">
+      
+      <Link to="/reset-password/" className='link'><div className="perfil-cambiar-contrasena">
         Cambiar Contraseña
+      </div>
+      </Link>
+      <div className="perfil-cerrar-sesion" onClick={logout}>
+        Cerrar Sesión
       </div>
     </section>
   );

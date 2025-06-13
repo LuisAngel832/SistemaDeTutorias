@@ -8,7 +8,7 @@ const HomeT = () => {
 
   return (
     <div className="home-t">
-      {isMobile ? <HeaderTR /> : <HeaderT />}
+      {isMobile ? <HeaderTR /> : <HeaderT search={false}/>}
       <MainContent />
     </div>
   );
