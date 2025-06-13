@@ -25,7 +25,7 @@ export const useTutoriaActions = (tutoria) => {
   const handleConfirmCancel = async () => {
     try {
       const response = await fetchWithToken(
-        `https://backtutorias.onrender.com/tutorias/eliminar/${tutoria.idTutoria}`,
+        `https://backtutorias.onrender.com/tutorias/cancelarTutoria/${tutoria.idTutoria}`,
         { method: "DELETE" }
       );
       if (!response.ok) throw new Error("Error al eliminar la tutoría");
