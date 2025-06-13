@@ -1,0 +1,147 @@
+/* ---- MODAL RESPONSIVE ---- */
+
+.finalizar-tutoria-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.finalizar-tutoria {
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  padding: 2rem;
+  background-color: #00549F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.finalizar-tutoria h1 {
+  font-size: clamp(20px, 5vw, 32px); /* Se adapta */
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.finalizar-tutoria .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.finalizar-tutoria .buttons button {
+  flex: 1;
+  font-size: clamp(14px, 4vw, 18px);
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  min-width: 100px;
+  max-width: 45%;
+}
+
+/* ---- MODAL: Mobile-specific tweaks ---- */
+@media (max-width: 480px) {
+  .finalizar-tutoria {
+    min-height: 240px;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .finalizar-tutoria .buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .finalizar-tutoria .buttons button {
+    font-size: 14px;
+    padding: 10px;
+    min-width: 100px;
+  }
+}
+
+/* Ajuste general para listas de tutorados */
+.list-item {
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+/* Texto adaptable */
+.alumno-matricula-content h4,
+.alumno-nombre-content h4 {
+  font-size: clamp(14px, 4vw, 18px);
+  text-align: left;
+}
+
+.alumno-matricula-content p,
+.alumno-nombre-content p {
+  font-size: clamp(16px, 5vw, 20px);
+  font-weight: bold;
+}
+
+/* Responsive específico para móviles */
+@media (max-width: 480px) {
+  .list-item {
+    padding: 8px 12px;
+  }
+
+  .alumno-matricula-content,
+  .alumno-nombre-content {
+    width: 100%;
+  }
+}
+
+.tutoria .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio amplio por defecto */
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.tutoria .buttons button {
+  padding: 10px 24px;
+  font-size: clamp(14px, 2vw, 18px);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  flex: 0 1 auto;
+  transition: all 0.2s ease;
+}
+
+/* Responsive: Pantallas pequeñas */
+@media (max-width: 480px) {
+  .tutoria .buttons {
+    gap: 10px; /* Espacio más pequeño en móviles */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tutoria .buttons button {
+    width: 100%; /* Que ocupen todo el ancho disponible */
+    max-width: 250px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,200 @@
+.finalizar-tutoria-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo gris oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.finalizar-tutoria {
+  background-color: rgb(0, 84, 159); /* Azul intenso */
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 85%;
+  max-width: 300px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.finalizar-tutoria h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.finalizar-tutoria-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo gris oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.finalizar-tutoria {
+  background-color: rgb(0, 84, 159); /* Azul intenso */
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 85%;
+  max-width: 300px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.finalizar-tutoria h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.finalizar-tutoria .buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.finalizar-tutoria .buttons button {
+  flex: 1;
+  font-size: clamp(14px, 4vw, 18px); /* Se adapta al tamaño de pantalla */
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  min-width: 100px;
+  max-width: 100%;
+}
+
+.finalizar-tutoria .buttons button:first-child {
+  background-color: red;
+  color: white;
+}
+
+.finalizar-tutoria .buttons button:last-child {
+  background-color: #00c853;
+  color: white;
+}
+
+/* Opcional: cerrar con X en esquina superior */
+.finalizar-tutoria .close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.finalizar-tutoria .buttons button:first-child {
+  background-color: red;
+  color: white;
+}
+
+.finalizar-tutoria .buttons button:last-child {
+  background-color: #00c853;
+  color: white;
+}
+
+/* Opcional: cerrar con X en esquina superior */
+.finalizar-tutoria .close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+ /*Yo y chatyipt */
+@media (max-width: 480px) {
+    .info-tutoria-container {
+        padding-top: 40px; 
+    }
+
+    .info-tutoria-tutor {
+        width: 95%;  
+    }
+
+    .info-tutoria-label {
+        font-size: 18px;  
+    }
+
+    .info-tutoria-input {
+        font-size: 16px;  
+        height: 35px;  
+        padding: 5px 0 5px 5%; 
+    }
+
+    .info-tutoria-buttons {
+        font-size: 24px;  
+        flex-direction: column;  
+        gap: 10px;  
+    }
+}
+
+
+@media (max-width: 768px) {
+    .info-tutoria-container {
+        padding-top: 60px;  
+    }
+
+    .info-tutoria-tutor {
+        width: 90%;  
+    }
+
+    .info-tutoria-label {
+        font-size: 20px; 
+    }
+
+    .info-tutoria-input {
+        font-size: 18px;  
+        height: 38px;  
+    }
+
+    .info-tutoria-buttons {
+        font-size: 26px;  /* Tamaño de texto adecuado para tabletas */
+    }
+}
+
+/* Responsive: Pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .info-tutoria-container {
+        padding-top: 80px;  /* Espacio adecuado en escritorios */
+    }
+
+    .info-tutoria-tutor {
+        width: 80%;  /* Ancho más grande en pantallas grandes */
+    }
+
+    .info-tutoria-label {
+        font-size: 24px;  /* Ajuste para pantallas más grandes */
+    }
+
+    .info-tutoria-input {
+        font-size: 20px;  /* Mayor tamaño de texto */
+        height: 40px;  /* Normalización de la altura */
+    }
+
+    .info-tutoria-buttons {
+        font-size: 28px;  /* Tamaño adecuado para escritorios */
+    }
+}

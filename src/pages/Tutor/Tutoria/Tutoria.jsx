@@ -1,8 +1,11 @@
 import "./tutoria.css";
+
+import "./tutoriaR.css";
 import Button from "./../../../components/Tutor/ButtonTrue";
 import CardAlumno from "./CardAlumno";
 import Header from "./../../../components/Tutor/Header";
 import { useParams, Link } from "react-router-dom";
+
 import { useState } from "react";
 import { useTutoriaDetail } from "../../../hooks/useTutoriaDetail";
 

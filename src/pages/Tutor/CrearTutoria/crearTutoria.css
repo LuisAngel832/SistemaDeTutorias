@@ -44,6 +44,7 @@
     justify-content: space-between;
     width: 200px;
     font-size: 32px;
+    align-items: center;
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -63,6 +64,9 @@
     border: 1px solid #ccc;
     padding: 10px;
     font-size: 18px;
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+    height: clamp(36px, 5vw, 42px);
+    padding: clamp(8px, 1vw, 10px);
 }
 
 .button-crear-tutoria{
@@ -72,8 +76,10 @@
 
 
 .select{
+
     font-size: 18px;
     width: 76.5%;
     height: 60px;
     background-color: white;
 }
+
