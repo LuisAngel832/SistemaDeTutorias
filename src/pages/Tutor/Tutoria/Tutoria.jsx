@@ -15,7 +15,7 @@ const Tutoria = () => {
 
   const handleConfirmFinalizar = async () => {
     await finalizarTutoria();
-    window.location.reload(); // o redirigir si se prefiere
+    window.location.reload(); 
   };
 
   if (loading) return <p className="cargando">Cargando tutoría...</p>;

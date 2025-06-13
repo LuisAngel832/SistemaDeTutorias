@@ -3,12 +3,16 @@ import MainContentPerfil from './MainContentPerfil'
 import './perfil.css'
 
 const Perfil  = ()=>{
+
+    
+
     return (
         <div className="perfil">
             <HeaderT search={false}/>
-            <MainContentPerfil/>
+            <MainContentPerfil  />
         </div>
     )
 }
+
 
 export default Perfil

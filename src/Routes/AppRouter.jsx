@@ -3,6 +3,8 @@ import PrivateRoute from "./PrivateRoute";
 
 import Login from "../pages/LogIn/LogIn";
 import Registro from "../pages/Registro/Registro";
+import RecuperarPassword from "../pages/RecuperarPassword/RecuperarPassword";
+import RecuperarPasswordForm from "../pages/RecuperarPassword/RecuperarPasswordForm";
 
 import HomeTutor from "../pages/Tutor/Home/Home";
 import CrearTutoria from "../pages/Tutor/CrearTutoria/CrearTutoria";
@@ -23,6 +25,8 @@ const AppRouter = () => {
       {/* Rutas públicas */}
       <Route path="/login" element={<Login />} />
       <Route path="/registro" element={<Registro />} />
+      <Route path="/recuperar-password" element={<RecuperarPassword />} />
+      <Route path="/reset-password/" element={<RecuperarPasswordForm />} />
 
       {/* Redirección inteligente desde raíz */}
       <Route

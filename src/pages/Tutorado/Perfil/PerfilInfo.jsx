@@ -4,10 +4,10 @@ const PerfilInfo = ({ nombre, correo }) => {
   return (
     <section className="perfil-info-content">
       <div className="perfil-saludo">
-        <p>Hola, {nombre}</p>
+        <p>Hola, {localStorage.getItem("nombre")}</p>
       </div>
       <div className="perfil-correo">
-        <p>Correo: {correo}</p>
+        <p>Correo: {localStorage.getItem("correo")}</p>
       </div>
       <div className="perfil-cambiar-contrasena">
         Cambiar Contraseña

@@ -28,10 +28,12 @@ const useAutentificacion = () => {
       }
 
       const data = await response.json();
-      console.log(data);
+      console.log("data", data);
       localStorage.setItem("token", data.token);
       localStorage.setItem("rol", data.rol);
       localStorage.setItem("matricula", matricula);
+      localStorage.setItem("nombre", data.nombre);
+      localStorage.setItem("correo", data.correo);
 
       if (data.rol === "tutor") {
         navigate("/tutor/home");

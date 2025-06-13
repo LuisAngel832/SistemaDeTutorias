@@ -19,6 +19,8 @@
     padding: 30px;
     margin-bottom: 2rem;
 }
+
+
 .tutoria h2{
     margin: 0;
     font-size: 32px;
@@ -68,7 +70,6 @@
 }
 
 
-/* -------------------estilos secion alumnos --------------------------*/
 
 .alumno-list{
     width: 100%;

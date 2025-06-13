@@ -54,7 +54,7 @@
             
 
             <section className="login-buttons">
-              <button type="button">Recuperar Contraseña</button>
+              <Link to="/recuperar-password"><button type="button">Recuperar Contraseña</button></Link>
               <Link to="/registro"><button type="button">Registrarse</button></Link>
             </section>
           </form>
