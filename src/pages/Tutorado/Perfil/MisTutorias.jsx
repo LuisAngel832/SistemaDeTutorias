@@ -1,4 +1,10 @@
+
+import {useTutoriasTutorado} from '../../../hooks/useTutoriasTutorado.jsx'
 const MisTutorias = () =>{
+
+    const { tutorias } = useTutoriasTutorado();
+    const tutoriasFinalizadas = tutorias.filter(tutoria => tutoria.estado === "Finalizada");
+    console.log(tutorias);
     return (
         <div className="mistutorias-content">
             <div className="title">
@@ -7,8 +13,10 @@ const MisTutorias = () =>{
             <div className="mistutorias-completadas">
                 <p>Completadas</p>
                 <ul>
-                    <li>Algebra basico(juan perez)</li>
-                    <li>fisica (Martin Perez)</li>
+                    {tutoriasFinalizadas && <p>No hay tutorias completadas</p>}
+                    {tutoriasFinalizadas.map((tutoria) => (
+                        <li key={tutoria.idTutoria}>{tutoria.materia.nombreMateria}</li>
+                    ))}
                 </ul>
             </div>
 

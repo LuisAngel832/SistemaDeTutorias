@@ -1,7 +1,7 @@
 import "./registro.css";
 import logo from "../../assets/img/logo.png";
 import "./Registro_respon.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAutentificacion from "../../hooks/useAutentificacion";
 
@@ -16,6 +16,7 @@ const Registro = () => {
   const [password, setpassword] = useState("");
   const [rol, setRol] = useState("alumno");
   const [matricula, setMatricula] = useState("");
+  const [error, setError] = useState("");
 
   const handleRegistro = async (e) => {
     e.preventDefault();
@@ -31,6 +32,9 @@ const Registro = () => {
     registro(rol, usuario, setError);
   }
 
+  useEffect(() => {
+    console.log(error);
+  }, [error]);
   return (
     <div className="registro">
       <div className="registro-content">

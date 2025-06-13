@@ -1,5 +1,5 @@
 import Calendario from "./Calendario";
-import { useTutoriasTutorado } from "../../../hooks/useTutoriaTutorado";
+import { useTutoriasTutorado } from "../../../hooks/useTutoriasTutorado";
 
 const MainContent = () => {
   const { tutorias, error } = useTutoriasTutorado();

@@ -35,7 +35,7 @@ const Calendario = ({ mes, anio, tutorias = [] }) => {
           const contenido = (
             <div
               className={`calendario-dia ${
-                tutoriasDelDia.length > 0 ? "tutoria" : index % 2 === 0 ? "verde" : "azul"
+                tutoriasDelDia.length > 0 ? "tutoria-tutorado" : index % 2 === 0 ? "verde" : "azul"
               }`}
             >
               <strong>{dia}</strong>
