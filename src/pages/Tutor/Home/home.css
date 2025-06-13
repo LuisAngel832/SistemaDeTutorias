@@ -1,11 +1,7 @@
 .home{
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  box-sizing: border-box;
-  padding-top: 80px;
 }
 .tutorias-box{
   margin-top: 3rem;

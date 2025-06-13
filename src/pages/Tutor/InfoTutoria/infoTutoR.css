@@ -177,9 +177,6 @@
 
 /* Responsive: Pantallas grandes (escritorios) */
 @media (min-width: 1024px) {
-    .info-tutoria-container {
-        padding-top: 80px;  /* Espacio adecuado en escritorios */
-    }
 
     .info-tutoria-tutor {
         width: 80%;  /* Ancho más grande en pantallas grandes */

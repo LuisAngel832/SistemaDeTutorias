@@ -1,15 +1,18 @@
 .agregar-horario{
-    padding-top: 80px;
+    font-family: "Montserrat", sans-serif;
+    
+}    
+.main-agregar-horario{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
-    height: 100vh;
-    
-}       
+    margin-top: 3rem;
+}   
 
-.main-horario{ 
+.content-horario{ 
     width: 80%;
     height: 80%;
     background-color:rgba(213, 213, 213, 0.26);

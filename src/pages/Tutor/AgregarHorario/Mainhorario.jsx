@@ -114,25 +114,30 @@ const MainHorario = () => {
           handleClickBtn1={handleShowModal}
         />
       )}
+      <div className="main-agregar-horario">
+        <section className="content-horario">
+          <h2>Agregar Horario</h2>
+          <div className="main-horario-content">
+            <div className="select-fecha">
+              <Caledario fecha={fecha} setFecha={setFecha} />
+            </div>
+            <div className="select-hora-min">
+              <SelectHora
+                title="Hora de Inicio"
+                value="inicio"
+                {...propsHora}
+              />
 
-      <section className="main-horario">
-        <h2>Agregar Horario</h2>
-        <div className="main-horario-content">
-          <div className="select-fecha">
-            <Caledario fecha={fecha} setFecha={setFecha} />
+              <SelectHora title="Hora Final" value="fin" {...propsHora} />
+            </div>
           </div>
-          <div className="select-hora-min">
-            <SelectHora title="Hora de Inicio" value="inicio" {...propsHora} />
-
-            <SelectHora title="Hora Final" value="fin" {...propsHora} />
+          <div className="button-content">
+            <button className="btn-aceptar" onClick={handleAgregarHorario}>
+              Agregar Horario
+            </button>
           </div>
-        </div>
-        <div className="button-content">
-          <button className="btn-aceptar" onClick={handleAgregarHorario}>
-            Agregar Horario
-          </button>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };

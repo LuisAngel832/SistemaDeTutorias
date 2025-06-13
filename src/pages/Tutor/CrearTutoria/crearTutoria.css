@@ -1,11 +1,15 @@
 .crear-tutoria{
+   font-family: "Montserrat", sans-serif;
+}  
+
+.main-crear-tutoria{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    padding-top: 80px;
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
-}   
+    margin-top: 3rem;
+}
 
 .crear-tutoria-container    {
     width: 80%;
